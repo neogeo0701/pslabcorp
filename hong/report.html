@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홍지민 학생을 위한 PS:LAB 분석 보고서</title>
+    <meta name="description" content="PS:LAB이 제공하는 홍지민 학생 맞춤형 퍼스널 입시 분석 리포트">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="report-wrapper">
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <header class="hero-section">
+        <div class="hero-top-bar">
+            <span class="pslab-brand">PS:LAB</span>
+            <span class="hero-date">2026년 4월 13일 발행</span>
+        </div>
+        <div class="hero-logos">
+            <div class="hero-logo-block">
+                <img src="assets/snu.png" alt="서울대" class="hero-logo-img">
+                <span class="hero-logo-label">서울대 경제학부</span>
+            </div>
+            <span class="hero-logo-arrow">·</span>
+            <div class="hero-logo-block">
+                <img src="assets/ku.png" alt="고려대" class="hero-logo-img">
+                <span class="hero-logo-label">고려대 경영대학</span>
+            </div>
+            <span class="hero-logo-arrow">·</span>
+            <div class="hero-logo-block">
+                <img src="assets/khu.png" alt="경희대" class="hero-logo-img">
+                <span class="hero-logo-label">경희대 이과대학</span>
+            </div>
+        </div>
+        <h1 class="hero-main-title">
+            <span class="hero-subtitle">PS:LAB REPORT</span>
+            홍지민 학생을 위한<br>
+            <em>퍼스널 입시 분석 보고서</em>
+        </h1>
+        <p class="slogan">"데이터를 기반으로 설계하고, 입학사정관의 시선으로 완성합니다."</p>
+        <div class="hero-meta-row">
+            <div class="hero-chip">담당 멘토: 유준환 · 김호민 · 고대현</div>
+            <div class="hero-chip">인천신현고등학교 3학년 · 인천 서구</div>
+            <div class="hero-chip personal-chip">📄 사회학/미디어 특화 리포트</div>
+        </div>
+    </header>
+
+    <!-- ═══════════════ TOC ═══════════════ -->
+    <nav class="toc-section">
+        <p class="toc-label">목차 · CONTENTS</p>
+        <div class="toc-grid">
+            <a href="#overview" class="toc-item"><span>01</span> CONSULTING OVERVIEW</a>
+            <a href="#data-analysis" class="toc-item"><span>02</span> ACADEMIC DATA ANALYSIS</a>
+            <a href="#evaluation" class="toc-item"><span>03</span> STUDENT RECORD EVALUATION</a>
+            <a href="#roadmap" class="toc-item"><span>04</span> TARGET UNIVERSITY ROADMAP</a>
+            <a href="#action-plan" class="toc-item"><span>05</span> 3-1 ACTION PLAN & CALENDAR</a>
+            <a href="#mentors-tip" class="toc-item"><span>06</span> MENTOR'S SPECIAL TIP</a>
+        </div>
+    </nav>
+
+    <!-- ═══════════════ 01 CONSULTING OVERVIEW ═══════════════ -->
+    <section class="report-section" id="overview">
+        <div class="section-header">
+            <span class="section-num">01</span>
+            <h2 class="section-title">CONSULTING OVERVIEW</h2>
+        </div>
+
+        <div class="pslab-intro-box">
+            <div class="pslab-intro-text">
+                <h3>안녕하세요, <strong>PS:LAB</strong>입니다.</h3>
+                <p>보성고를 졸업하고 현재 서울대, 고려대, 한양대 등 명문대에서 공부 중인 선배들이 모인 입시 전략 팀입니다. 우리가 직접 겪고 뚫어낸 강남·송파 입시의 정답을 후배들에게 가장 직관적인 <strong>'데이터 리포트'</strong>로 전달하며, 합리적인 비용으로 최고의 퀄리티를 보장합니다.</p>
+            </div>
+                                    <div class="pslab-strengths">
+                <div class="strength-item">
+                    <span class="s-icon">🤖</span>
+                    <div>
+                        <strong>완벽한 AI Workspace</strong>
+                        <p>고도화된 AI 환경으로 방대한 입시 데이터를 크로스체크합니다.</p>
+                    </div>
+                </div>
+                <div class="strength-item">
+                    <span class="s-icon">🎯</span>
+                    <div>
+                        <strong>추상적인 조언 배제</strong>
+                        <p>당장 실행 가능한 디테일만 제공합니다.</p>
+                    </div>
+                </div>
+                <div class="strength-item">
+                    <span class="s-icon">💡</span>
+                    <div>
+                        <strong>거품을 뺀 합리적 비용</strong>
+                        <p>명문대 합격생이 직접 작성하는 고퀄리티 리포트.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="process-section">
+            <h3 class="subsection-title">체계적인 3단계 리포트 솔루션</h3>
+            <div class="process-steps">
+                <div class="process-step active">
+                    <div class="step-num">STEP 1</div>
+                    <div class="step-icon">🔬</div>
+                    <h4>정밀 데이터 분석</h4>
+                    <p>생기부를 입학사정관의 시선에서 냉정하게 평가하여 보완할 수 있는 핵심 키워드를 도출합니다.</p>
+                    <div class="step-badge">현재 단계</div>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="process-step">
+                    <div class="step-num">STEP 2</div>
+                    <div class="step-icon">🗺️</div>
+                    <h4>스토리보드 기획</h4>
+                    <p>목표 대학 인재상에 완벽히 부합하는 방향성을 설정하고 탐구 및 독서 활동을 설계합니다.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="process-step">
+                    <div class="step-num">STEP 3</div>
+                    <div class="step-icon">📋</div>
+                    <h4>실전 리포팅 &amp; 피드백</h4>
+                    <p>실제 학교 활동에 바로 적용할 수 있는 디테일한 가이드 리포트를 제공하며 피드백을 진행합니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="two-column" style="margin-top: 30px;">
+            <div class="col card">
+                <h3 class="col-title">🎓 학생 프로필</h3>
+                <ul class="info-list">
+                    <li><span class="info-label">이름</span> <strong>홍지민</strong></li>
+                    <li><span class="info-label">소속</span> 인천신현고등학교 3학년 (일반고)</li>
+                    <li><span class="info-label">진로</span> <strong class="grade-display" style="font-size:1rem;">사회학/미디어 지망</strong> <em class="tag ok">사회적 약자 보호 서사</em></li>
+                    <li><span class="info-label">내신</span> <strong class="grade-display">2.27등급</strong> <em class="tag up">2학년 1학기 1.9 반등</em></li>
+                    <li><span class="info-label">봉사</span> 47시간 (I-아세안 등) <em class="tag ok">전공 적합성 우수</em></li>
+                </ul>
+                <div class="target-summary">
+                    <p class="target-title">🎯 전형별 지원 가이드</p>
+                    <div class="target-row"><strong>소신:</strong> 한양대 · 중앙대 · 숙명여대</div>
+                    <div class="target-row"><strong>적정:</strong> 단국대 · 광운대 · 세종대</div>
+                </div>
+            </div>
+            <div class="col card">
+                <h3 class="col-title">👨‍💼 담당 멘토진</h3>
+                <div class="mentor-list">
+                    <div class="mentor-item" onclick="openPopup('mentor1')">
+                        <div class="mentor-logo-wrap">
+                            <img src="assets/snu.png" alt="서울대" class="mentor-univ-logo">
+                        </div>
+                        <div class="mentor-info">
+                            <div class="mentor-name">김호민 멘토 <span class="mentor-tag">서울대 경제학부</span></div>
+                        </div>
+                        <span class="mentor-arrow">›</span>
+                    </div>
+                    <div class="mentor-item" onclick="openPopup('mentor2')">
+                        <div class="mentor-logo-wrap">
+                            <img src="assets/ku.png" alt="고려대" class="mentor-univ-logo">
+                        </div>
+                        <div class="mentor-info">
+                            <div class="mentor-name">유준환 멘토 <span class="mentor-tag">고려대 경영학부</span></div>
+                        </div>
+                        <span class="mentor-arrow">›</span>
+                    </div>
+                    <div class="mentor-item" onclick="openPopup('mentor3')">
+                        <div class="mentor-logo-wrap">
+                            <img src="assets/khu.png" alt="경희대" class="mentor-univ-logo">
+                        </div>
+                        <div class="mentor-info">
+                            <div class="mentor-name">고대현 멘토 <span class="mentor-tag">경희대 이과대학</span></div>
+                        </div>
+                        <span class="mentor-arrow">›</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ 02 ACADEMIC DATA ANALYSIS ═══════════════ -->
+    <section class="report-section" id="data-analysis">
+        <div class="section-header">
+            <span class="section-num">02</span>
+            <h2 class="section-title">ACADEMIC DATA ANALYSIS</h2>
+        </div>
+
+        <div class="two-column">
+            <div class="col card">
+                <h3 class="col-title">📈 내신 성적 추이</h3>
+                <div class="chart-container">
+                    <canvas id="gradeChart"></canvas>
+                </div>
+                <div class="chart-summary-box">
+                    <div class="chart-summary-item">
+                        <span class="csi-label">종합 내신</span>
+                        <span class="csi-value primary">2.27</span>
+                    </div>
+                    <div class="chart-summary-item">
+                        <span class="csi-label">최고 성적</span>
+                        <span class="csi-value safe">1.90</span>
+                    </div>
+                    <div class="chart-summary-item">
+                        <span class="csi-label">추이</span>
+                        <span class="csi-value up-text">반등형</span>
+                    </div>
+                </div>
+                <p class="chart-desc">1학년의 부진(2.56)을 딛고 2학년 1학기 <strong>1.90등급</strong>으로 반등하며 본인의 역량을 증명했으나, 2학년 2학기에서 수학의 약점으로 인해 다시 2.38로 하락했습니다. 3학년 1학기 수학 방어와 사탐 올 1등급으로 확실한 우상향 쐐기를 박아야 합니다.</p>
+            </div>
+            <div class="col card">
+                <h3 class="col-title">📊 교과 상세 데이터</h3>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>교과군</th>
+                                <th>1-1</th>
+                                <th>1-2</th>
+                                <th>2-1</th>
+                                <th>2-2</th>
+                                <th>3학년 목표</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-important">
+                                <td><strong>국어 (공통/문학/독서)</strong></td>
+                                <td class="cell-best">2</td>
+                                <td class="cell-best">2</td>
+                                <td class="cell-best">2</td>
+                                <td class="cell-best">2</td>
+                                <td class="cell-target">1등급 권 진입</td>
+                            </tr>
+                            <tr class="row-important">
+                                <td><strong>수학 (공통/수학Ⅰ·Ⅱ)</strong></td>
+                                <td>3</td>
+                                <td class="cell-dim">4</td>
+                                <td>3</td>
+                                <td class="cell-dim">4</td>
+                                <td class="cell-target">반드시 2등급 방어</td>
+                            </tr>
+                            <tr>
+                                <td><strong>영어 (공통/영어Ⅰ·Ⅱ)</strong></td>
+                                <td>3</td>
+                                <td class="cell-best">2</td>
+                                <td class="cell-best">2</td>
+                                <td class="cell-best">2</td>
+                                <td class="cell-ok">안정적 2등급 유지</td>
+                            </tr>
+                            <tr class="row-important">
+                                <td><strong>역사 (한국사/세계사)</strong></td>
+                                <td class="cell-best">1</td>
+                                <td class="cell-best">1</td>
+                                <td class="cell-best">1</td>
+                                <td>2</td>
+                                <td class="cell-target">1등급 탈환</td>
+                            </tr>
+                            <tr class="row-important">
+                                <td><strong>일반사회 (통사/정법/윤사)</strong></td>
+                                <td class="cell-best">1</td>
+                                <td>2</td>
+                                <td class="cell-best">1 (윤)</td>
+                                <td>2·2</td>
+                                <td class="cell-target">전 과목 1등급</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="subject-analysis">
+                    <div class="subject-bar">
+                        <span class="sb-label">인문사회 (국어/역사/일반사회)</span>
+                        <div class="sb-track"><div class="sb-fill green" style="width:90%"></div></div>
+                        <span class="sb-note ok">전공 관련 압도적</span>
+                    </div>
+                    <div class="subject-bar">
+                        <span class="sb-label">수학 약점 리스크</span>
+                        <div class="sb-track"><div class="sb-fill" style="width:50%"></div></div>
+                        <span class="sb-note" style="color: #E11D48;">치명적 감점 요인</span>
+                    </div>
+                </div>
+                <div class="memo-box alert" style="margin-top:15px;">
+                    ⚠️ 사회학과/미디어 지망생은 인문사회 교과의 정성평가 비중이 매우 높습니다. <strong>2학년 윤리와사상/세계사 1등급</strong> 기록을 세특과 연계해 극대화하십시오. 단, 수학 등급 방어는 입결의 1차 저지선입니다.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ 03 STUDENT RECORD EVALUATION ═══════════════ -->
+    <section class="report-section" id="evaluation">
+        <div class="section-header">
+            <span class="section-num">03</span>
+            <h2 class="section-title">STUDENT RECORD EVALUATION</h2>
+        </div>
+
+        <div class="eval-grid">
+            <div class="eval-card">
+                <div class="eval-icon">📚</div>
+                <div class="eval-badge">학업역량</div>
+                <h3>입체적 학업 성취와 분석력</h3>
+                <ul class="eval-list">
+                    <li><strong>내신 역격 서사의 완성</strong> 1학년 2.5에서 2학년 1.9로 이어지는 정량적 반등은 단순 성적 향상을 넘어 '학습 동기'와 '자기주도성'을 증명하는 리포트의 핵심 강점입니다.</li>
+                    <li><strong>비판적 문해력의 실체화</strong> 국어 및 독서 세특에서 확인되는 '뉴스 아카이브' 및 '논설문 분석' 역량은 사회과학도로서 요구되는 텍스트 해석 능력을 최고 수준으로 보여줍니다.</li>
+                </ul>
+            </div>
+            <div class="eval-card">
+                <div class="eval-icon">🌐</div>
+                <div class="eval-badge">진로역량</div>
+                <h3>사회과학적 전문 탐구 뎁스(Depth)</h3>
+                <ul class="eval-list">
+                    <li><strong>주제 탐구의 유기적 심화</strong> 1학년 '사회적 약자 개괄 탐구'에서 2학년 '탄소 불평등' 및 '데이터 사회학'으로 이어지는 깊이 있는 확장성이 대학의 평가에서 매우 높은 점수를 받을 요인입니다.</li>
+                    <li><strong>학급 공동체 변화 주도</strong> 학급 부회장 활동 시 단순 직급 수행이 아닌, 조직 내 구체적인 변화와 화합을 이끌어낸 '실천적 리더십'이 생활기록부에 명확히 기술되어 있습니다.</li>
+                </ul>
+            </div>
+            <div class="eval-card">
+                <div class="eval-icon">🤝</div>
+                <div class="eval-badge">공동체역량</div>
+                <h3>나눔의 가치와 실천적 책임</h3>
+                <ul class="eval-list">
+                    <li><strong>압도적인 봉사 진정성</strong> 47시간 이상의 봉사 이력(특히 I-아세안 연계 활동)은 사회적 감수성이 단순히 이론에 머물지 않고 현장으로 이어짐을 증명하며, 특정 상위권 대학 학종 지원 시 강력한 무기가 됩니다.</li>
+                    <li><strong>전공 융합적 인성</strong> 사회적 소외 계층에 대한 수학적 관심(정보 격차 분석 등)은 진로와 공동체 의식이 융합된 입체적 인재상을 보여줍니다.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Narrative Timeline -->
+        <div class="setech-section">
+            <h3 class="subsection-title">📋 생기부 서사 흐름 및 세특 분석</h3>
+            <div class="narrative-timeline">
+                <div class="nt-step">
+                    <div class="nt-dot past"></div>
+                    <div class="nt-year">1학년</div>
+                    <div class="nt-theme">사회적 약자 탐색</div>
+                    <div class="nt-desc">여성 인권, 빈곤 등 파편화된 사회적 이슈에 대한 관심과 참여</div>
+                </div>
+                <div class="nt-arrow">→</div>
+                <div class="nt-step highlight">
+                    <div class="nt-dot now"></div>
+                    <div class="nt-year">2학년</div>
+                    <div class="nt-theme">미디어 기반 사회 소통</div>
+                    <div class="nt-desc">뉴스 아카이브, 미디어 리터러시를 통한 사회과학적 분석의 틀 마련</div>
+                </div>
+                <div class="nt-arrow">→</div>
+                <div class="nt-step target">
+                    <div class="nt-dot goal"></div>
+                    <div class="nt-year">3학년 목표</div>
+                    <div class="nt-theme">데이터 사회학의 완성</div>
+                    <div class="nt-desc">ESG/ESV 이론 도입, 수리 모델링을 통한 '과학적 사회 분석가' 브랜딩</div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">📋 세특 분석 위젯 — 전공 역량 지표 (Benchmark)</h3>
+            <div class="setech-grid">
+                <div class="setech-card sc-high">
+                    <div class="sc-subject">국어 · 비판적 문해력 ★★★★★</div>
+                    <div class="sc-content">국어 및 독서 세특에서 기록된 '뉴스 아카이브' 및 '논설문 분석'은 단순한 텍스트 해석을 넘어 미디어가 생산하는 <strong>사회적 권력 관계</strong>를 비판적으로 검토할 수 있는 기초 역량을 증명합니다. 사회학과 미디어 커뮤니케이션 양쪽 모두에서 가장 선호하는 학업적 뎁스(Depth)이자 매우 강력한 차별화 요소입니다.</div>
+                </div>
+                <div class="setech-card sc-high">
+                    <div class="sc-subject">사회문화 · 사회적 약자 프레이밍 ★★★★★</div>
+                    <div class="sc-content">이론적 배경을 바탕으로 한 사회 현실 비판 및 대안 제시 능력이 탁월합니다. 1학년의 막연한 문제의식이 2학년 들어 '언론의 소수자 재현 방식 비판'으로 구체화된 점은 <strong>전공에 대한 심도 깊은 고민과 유기적 지식 확장</strong>을 보여주는 핵심 기록입니다.</div>
+                </div>
+                <div class="setech-card sc-high">
+                    <div class="sc-subject">정치와 법 · 미디어와 권력 ★★★★☆</div>
+                    <div class="sc-content">권력 기관으로서의 미디어 견제와 정보 접근권에 대한 고찰은 훌륭합니다. 다만 서술 내용이 제도적 차원보다 도덕적 차원에 치중되어 있는 경향이 있습니다. 3학년 1학기에는 ESG, 언론 구제 등 <strong>구체적인 정책/법제도적 대안</strong>으로의 심화 확장이 요구됩니다.</div>
+                </div>
+                <div class="setech-card sc-mid">
+                    <div class="sc-subject">수학 Ⅱ/확통 · 데이터 사회학 ★★★☆☆</div>
+                    <div class="sc-content">사회 현상을 데이터로 치환하려는 학업적 시도가 돋보입니다. 수리적 역량 강화를 위해 3학년에는 ESG 경영의 효과성이나 빈부 격차지수 같은 사회과학적 지표들을 수학적으로 검증하는 <strong>'수리 모델링'</strong> 과정이 반드시 추가되어야 약점(수학 등급) 극복의 근거가 완성됩니다.</div>
+                </div>
+                <div class="setech-card sc-mid">
+                    <div class="sc-subject">영어 · 글로벌 미디어 사례 비교 ★★★☆☆</div>
+                    <div class="sc-content">외형적인 성적 방어는 성공적이나 세특 내용이 다소 평이합니다. 영어 지문 해석에 머물지 않고 능동적으로 영미권의 미디어 규제 사례나 다문화 사회의 언론 보도 가이드라인 등 영문 자료에 대한 학술적 탐구 기록을 더해 <strong>글로벌 사회과학도</strong>로서의 면모를 부각시키세요.</div>
+                </div>
+                <div class="setech-card sc-high">
+                    <div class="sc-subject">통합사회 · ESG 혁신과 기업 가치 ★★★★☆</div>
+                    <div class="sc-content">환경과 윤리 영역을 경제 주체와 연결한 구조적인 시각이 매우 우수합니다. 기업이 사회적 가치(ESV)를 창출하는 과정이 미디어를 통해 어떻게 브랜딩되는지 논리적으로 연결한다면, 상위권 대학 경제/경영 계열이나 융합 전공 지원에도 탄탄한 기반이 될 수 있습니다.</div>
+                </div>
+            </div>
+            <div class="setech-insight">
+                💡 <strong>전문 제언:</strong> 지민 학생은 이미 비교과 질이 높습니다. 3학년에서는 <strong>'사회과학 이론의 심화'</strong>와 <strong>'수학적 역량 노출'</strong>에만 집중하면 최상위권 대학도 충분히 승산이 있습니다.
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ 04 TARGET UNIVERSITY ROADMAP ═══════════════ -->
+    <section class="report-section" id="roadmap">
+        <div class="section-header">
+            <span class="section-num">04</span>
+            <h2 class="section-title">TARGET UNIVERSITY ROADMAP</h2>
+        </div>
+
+        <div class="roadmap-table-wrap">
+            <table class="roadmap-table">
+                <thead>
+                    <tr>
+                        <th>분류</th>
+                        <th>대학</th>
+                        <th>전형</th>
+                        <th>평균등급</th>
+                        <th>핵심 전략</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row-up">
+                        <td><span class="badge-pill up">상향</span></td>
+                        <td><strong>한양대</strong><br><small>사회학과</small></td>
+                        <td>학종(추천형)</td>
+                        <td>2.1</td>
+                        <td><strong>[주의] 수능 최저(3합7) 확보 필수.</strong> 생기부의 학술적 우수성 및 수학 반등 기록과 전문 탐구의 결합 어필.</td>
+                    </tr>
+                    <tr class="row-up">
+                        <td><span class="badge-pill up">소신</span></td>
+                        <td><strong>중앙대</strong><br><small>사회학/미디어</small></td>
+                        <td>학종(융합형)</td>
+                        <td>2.3</td>
+                        <td>다양한 활동을 유기적으로 엮는 '브랜딩' 역량 최우선 평가. 지민 학생에게 최적화.</td>
+                    </tr>
+                    <tr class="row-up">
+                        <td><span class="badge-pill up">소신</span></td>
+                        <td><strong>경희대</strong><br><small>사회학과</small></td>
+                        <td>네오르네상스</td>
+                        <td>2.2</td>
+                        <td>면접 비중 30%. 사회과학적 소양과 본인만의 가치관을 구체적 언어로 전달이 관건.</td>
+                    </tr>
+                    <tr class="row-push">
+                        <td><span class="badge-pill push">적정</span></td>
+                        <td><strong>건국대</strong><br><small>미디어커뮤</small></td>
+                        <td>자기추천</td>
+                        <td>2.4</td>
+                        <td>전공 적합성 40% 반영. 미디어 리터러시 및 실무적 탐구 이력이 합격의 키.</td>
+                    </tr>
+                    <tr class="row-safe">
+                        <td><span class="badge-pill safe">안정</span></td>
+                        <td><strong>단국대</strong><br><small>사회과학대</small></td>
+                        <td>학종(DKU인재)</td>
+                        <td>2.7</td>
+                        <td>내신 안정권. 면접에서 본인의 사회적 가치관을 명확히 전달하면 합격 확실.</td>
+                    </tr>
+                    <tr class="row-safe">
+                        <td><span class="badge-pill safe">안정</span></td>
+                        <td><strong>광운대/세종대</strong></td>
+                        <td>학종</td>
+                        <td>2.8</td>
+                        <td>비교과 우위로 안정적 합격 가능 라인. 최저 없는 전형 위주 공략.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="memo-box focus-memo" style="margin-top: 20px;">
+            <strong>💬 전략 가이드:</strong> 내신의 굴곡을 **'전공 전문성'**으로 덮는 전략이 유효합니다. 특히 중앙대 융합형은 지민 학생처럼 활동이 많은 학생에게 유리합니다.
+        </div>
+    </section>
+
+    <!-- ═══════════════ 05 3-1 ACTION PLAN & CALENDAR ═══════════════ -->
+    <section class="report-section" id="action-plan">
+        <div class="section-header">
+            <span class="section-num">05</span>
+            <h2 class="section-title">3-1 ACTION PLAN & STRATEGY CALENDAR</h2>
+        </div>
+
+        <!-- 3-1 Semester Strategy Calendar -->
+        <div class="calendar-section">
+            <h3 class="subsection-title">📅 3학년 1학기 집중 관리 캘린더</h3>
+            <div class="calendar-container">
+                <div class="calendar-month-card focus">
+                    <span class="month-label">4월</span>
+                    <h4 class="month-title">내신 집중 & 탐구 기획</h4>
+                    <span class="status-badge d-day">D-DAY</span>
+                    <ul class="calendar-list">
+                        <li><strong>중간고사 준비:</strong> 수학 2등급 진입 목표</li>
+                        <li><strong>탐구 주제 확정:</strong> ESG/ESV 심화 보고서</li>
+                        <li><strong>수행평가:</strong> 국어 세특 '비판적 독해' 노출</li>
+                    </ul>
+                </div>
+                <div class="calendar-month-card">
+                    <span class="month-label">5월</span>
+                    <h4 class="month-title">심화 탐구 & 보고서 완성</h4>
+                    <span class="status-badge ongoing">진행예정</span>
+                    <ul class="calendar-list">
+                        <li><strong>탐구 01 완성:</strong> ESG 실증 리포트 제출</li>
+                        <li><strong>수학 세특:</strong> 수리 모델링 프로젝트 시작</li>
+                        <li><strong>학교 행사:</strong> 사회 문제 토론 대회 참여</li>
+                    </ul>
+                </div>
+                <div class="calendar-month-card">
+                    <span class="month-label">6월</span>
+                    <h4 class="month-title">기말고사 & 생기부 마감</h4>
+                    <ul class="calendar-list">
+                        <li><strong>기말고사:</strong> 사회/국어 전교권 등수 사수</li>
+                        <li><strong>생기부 기록:</strong> 담임 선생님과 상담</li>
+                        <li><strong>독서:</strong> 사회학 거장들의 도서 3권 제출</li>
+                    </ul>
+                </div>
+                <div class="calendar-month-card">
+                    <span class="month-label">7월</span>
+                    <h4 class="month-title">최종 점검 & 수시 라인업</h4>
+                    <ul class="calendar-list">
+                        <li><strong>생기부 최종 확인:</strong> 오탈자 및 누락 점검</li>
+                        <li><strong>자소서(준비):</strong> 핵심 서사(Plot) 정리</li>
+                        <li><strong>수시 원서:</strong> 6학종 라인업 최종 확정</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <p class="sub-desc" style="margin-top: 40px;">카드를 클릭하면 <span class="keyword-strong">유준환 멘토 추천</span> 세부 실행 계획을 확인할 수 있습니다.</p>
+        <div class="action-grid">
+            <div class="action-card" onclick="openPopup('action1')">
+                <div class="action-num">탐구 1</div>
+                <div class="subject-tag">사회적 약자 · 기업 윤리</div>
+                <h3>ESG와 ESV의 차이 분석 및<br>기업의 사회적 책임 실증 탐구</h3>
+                <p class="action-preview">실제 기업들이 ESG 경영의 대두에 따라 어떤 식으로 행동하고 있는지 분석하고, 그 과정에서 발생하는 문제점과 해결 방안을 사회적 약자 보호 관점에서 제안</p>
+                <span class="click-more">세부 계획 보기 →</span>
+            </div>
+            <div class="action-card" onclick="openPopup('action2')">
+                <div class="action-num">탐구 2</div>
+                <div class="subject-tag">사회·문화/정치와 법 융합</div>
+                <h3>기후 위기와 탄소 중립:<br>지속 가능한 미래를 위한 정책 설계</h3>
+                <p class="action-preview">1학년 통합사회 탐구를 확장하여, 탄소 중립이 사회 구조적 불평등에 미치는 영향과 환경 정의(Environmental Justice) 실현 방안 탐구</p>
+                <span class="click-more">세부 계획 보기 →</span>
+            </div>
+            <div class="action-card" onclick="openPopup('action3')">
+                <div class="action-num">탐구 3</div>
+                <div class="subject-tag">수학 Ⅱ · 데이터 사회학</div>
+                <h3>남들이 하지 않는 심화 이론:<br>사회 현상의 수리적 모델링</h3>
+                <p class="action-preview">수학 Ⅱ의 미분/적분 개념을 활용하여 사회적 소외 계층의 정보 접근 격차 변화율을 분석하거나, ESG 경영의 효율성을 수치로 증명</p>
+                <span class="click-more">세부 계획 보기 →</span>
+            </div>
+        </div>
+        <div class="action-grid" style="margin-top:16px;">
+            <div class="action-card" onclick="openPopup('action4')">
+                <div class="action-num">탐구 4</div>
+                <div class="subject-tag">인문학 · 고전 비평</div>
+                <h3>비판적 문해력을 통한<br>인본주의 저널리즘 완성</h3>
+                <p class="action-preview">『자유론』, 『1984』 등의 고전을 현대 미디어 환경과 연결하여, 사회적 소외 계층을 대변하는 언론인의 윤리적 책임에 대한 에세이 집필</p>
+                <span class="click-more">세부 계획 보기 →</span>
+            </div>
+            <div class="action-card" onclick="openPopup('action5')">
+                <div class="action-num">독서</div>
+                <div class="subject-tag">사회학적 상상력 심화</div>
+                <h3>심화 도서 기반의<br>사회학적 에세이 집필</h3>
+                <p class="action-preview">『사회학적 상상력』(라이트 밀스), 『부의 기원』 독독 후, 개인의 문제가 어떻게 거시적 사회 구조와 연결되는지 논증</p>
+                <span class="click-more">세부 계획 보기 →</span>
+            </div>
+            <div class="action-card" onclick="openPopup('action6')">
+                <div class="action-num">전략</div>
+                <div class="subject-tag">수능 최저 · 수학 집중</div>
+                <h3>한양대 3합 7 최저 확보 및<br>수학 2등급 사수 전략</h3>
+                <p class="action-preview">한양대 학종(추천)의 신설된 수능 최저(3합 7) 달성은 이번 입시의 최우선 선결 과제임. 동시에 3학년 1학기 수학 성적은 우상향 서사의 방점 역할을 함</p>
+                <span class="click-more">세부 계획 보기 →</span>
+            </div>
+        </div>
+
+        <div class="checklist-box">
+            <div class="checklist-header">
+                <span class="checklist-title-icon">🗒</span>
+                <div>
+                    <h4>생기부 보완 체크리스트</h4>
+                    <p class="checklist-subtitle">3학년 1학기 필수 실행 항목</p>
+                </div>
+            </div>
+            <div class="checklist-grid">
+                <div class="checklist-item priority-high">
+                    <div class="cl-priority">P1</div>
+                    <div class="cl-content">
+                        <strong>수학 성취도 2등급 사수</strong>
+                        <span>내신 역전 서사의 마침표 · 취약점을 학업적 Grit으로 증명</span>
+                    </div>
+                </div>
+                <div class="checklist-item priority-high">
+                    <div class="cl-priority">P1</div>
+                    <div class="cl-content">
+                        <strong>ESG vs ESV 실증 리포트 완성</strong>
+                        <span>이론적 배경 + 차별화된 수리 모델링(미분 활용) 포함 필수</span>
+                    </div>
+                </div>
+                <div class="checklist-item priority-high">
+                    <div class="cl-priority">P1</div>
+                    <div class="cl-content">
+                        <strong>환경 정의 & 탄소 중립 정책 설계</strong>
+                        <span>1학년 탐구의 심화 확장 · 사회적 불평등 구조 개선안 도출</span>
+                    </div>
+                </div>
+                <div class="checklist-item priority-mid">
+                    <div class="cl-priority">P2</div>
+                    <div class="cl-content">
+                        <strong>비판적 문해력 기발 에세이 집필</strong>
+                        <span>『자유론』 등 고전 활용 · 미디어 윤리에 대한 학술적 고찰 기록</span>
+                    </div>
+                </div>
+                <div class="checklist-item priority-mid">
+                    <div class="cl-priority">P2</div>
+                    <div class="cl-content">
+                        <strong>학급 공동체 변화 주도 사례 기재</strong>
+                        <span>리더십의 도구화 · 조직의 실질적 변화를 이끈 구체적 에피소드</span>
+                    </div>
+                </div>
+                <div class="checklist-item priority-low">
+                    <div class="cl-priority">P3</div>
+                    <div class="cl-content">
+                        <strong>선배 합패스 생기부 대조 & 보완</strong>
+                        <span>중앙대/경희대 최근 합격자 데이터 기반 세특 수준 최종 점검</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ 06 MENTOR'S SPECIAL TIP ═══════════════ -->
+    <section class="report-section" id="mentors-tip">
+        <div class="section-header">
+            <span class="section-num">06</span>
+            <h2 class="section-title">MENTOR'S SPECIAL TIP</h2>
+        </div>
+
+        <div class="two-column">
+            <div class="col">
+                <div class="quote-card" onclick="openPopup('mentor1')">
+                    <div class="quote-mentor-header">
+                        <img src="assets/snu.png" alt="서울대" class="quote-univ-logo">
+                        <div>
+                            <h4>김호민</h4>
+                            <span class="quote-role">서울대 경제학부 26학번</span>
+                        </div>
+                    </div>
+                    <p>"지민 학생의 생기부는 <strong>'따뜻한 시선과 차가운 통찰'</strong>이 공존합니다. 사회적 약자를 향한 본인의 문제의식을 정교한 <strong>'데이터'</strong>와 <strong>'수리 모델'</strong>로 증빙하는 작업에만 집중하세요. 중앙대 융합형 전형이 원하는 비판적 지성의 최고점을 보여줄 수 있을 것입니다."</p>
+                </div>
+                <div class="quote-card" onclick="openPopup('mentor2')">
+                    <div class="quote-mentor-header">
+                        <img src="assets/ku.png" alt="고려대" class="quote-univ-logo">
+                        <div>
+                            <h4>유준환</h4>
+                            <span class="quote-role">고려대 경영학부 26학번</span>
+                        </div>
+                    </div>
+                    <p>"반전의 열쇠는 <strong>수학</strong>입니다. 2학년 때의 반등을 3학년 1학기 1등급(혹은 압도적 2등급)으로 종결지으세요. '수학적 역량을 사회적 가치 구현(ESG)에 투입하는 융합형 인재'라는 브랜딩은 서울대, 고려대 학종에서 가장 매력적인 합격 서사가 될 것입니다."</p>
+                </div>
+                <div class="quote-card" onclick="openPopup('mentor3')">
+                    <div class="quote-mentor-header">
+                        <img src="assets/khu.png" alt="경희대" class="quote-univ-logo">
+                        <div>
+                            <h4>고대현</h4>
+                            <span class="quote-role">경희대 이과대학 26학번</span>
+                        </div>
+                    </div>
+                    <p>"저도 고등학교 시절 수학의 약점 때문에 깊이 고민한 적이 있습니다. 하지만 지민 학생은 이미 그 약점을 강점으로 뒤집는 <strong>에너지</strong>를 보여주었습니다. 흔들림 없이 3학년 내신을 방어해 나간다면 상위권 대학의 입시 결과 또한 충분히 뒤집을 수 있습니다."</p>
+                </div>
+            </div>
+            <div class="col summary-col">
+                <div class="summary-label">최종 총평</div>
+                <h3>홍지민 학생을 위한 종합 제언</h3>
+
+                <p class="summary-text">홍지민 학생은 사회적 디테일을 포착하는 감수성과 이를 학술적으로 풀어내는 비판적 문해력이 이미 완성 단계에 있습니다. 특히 1학년의 파편화된 활동을 2학년 때 <strong>'데이터 사회학'</strong>이라는 줄기로 엮어낸 점이 매우 고무적입니다. 입학사정관은 단순한 모범생보다는 사회를 해부하는 탄탄한 논리력을 선호하며 지민 학생은 이 부분을 정확히 공략해왔습니다.</p>
+
+                <p class="summary-text">상위권 대학일수록 인문계라도 <strong>수학적 성취도</strong>를 학업 역량의 핵심 척도로 평가합니다. 1학년의 성적 하락에 좌절하지 않고 2학년 때 1등급대라는 극적인 수직 우상향을 만들어낸 것은, 지민 학생이 지닌 엄청난 회복 탄력성과 지적 근성을 반증합니다. 3학년 1학기 수학 성적은 지민 학생의 내신 역전 서사에 방점을 찍어줄 결정적 무기가 될 것입니다. 탐구 부문에서는 ESG와 ESV의 차이 분석 등 본인만의 날카로운 실증 논리를 세특에 녹여내십시오.</p>
+
+                <p class="summary-text">경희대(네오르네상스)와 중앙대(융합형)는 지민 학생의 학술적 뎁스를 가장 잘 이해해줄 전형입니다. 소신 있게 최상위권 라인을 공략하면서도, 학술적 비판의식을 정책적 대안으로까지 연결하는 <strong>실무적 문제 해결력</strong>을 꾸준히 증명하는 것 — 이것이 <strong>역전의 서사</strong>를 완성하는 최종 ACTION입니다.</p>
+                
+                <p class="summary-quote">"지민 학생이 사회에 던질 따뜻하고도 날카로운 질문들을 기대합니다. 세상의 본질을 파고드는 그 시선을 절대 잃지 마세요. 끝까지 응원하겠습니다!"</p>
+                <div class="summary-sig">— PS:LAB 김호민 · 유준환 · 고대현 멘토 일동 —</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="report-footer">
+        <div class="footer-top">
+            <div class="footer-brand">PS:LAB</div>
+            <div class="footer-links">
+                <a href="https://cafe.naver.com/labps" target="_blank" class="footer-link">💬 네이버 카페</a>
+                <a href="https://instagram.com/labps_official" target="_blank" class="footer-link">📱 @labps_official</a>
+            </div>
+        </div>
+        <div class="footer-info">
+            <p>발행일: 2026년 4월 13일 &nbsp;|&nbsp; 담당: 유준환 · 김호민 · 고대현 멘토</p>
+            <p>© 2026 PS:LAB Analytics. All rights reserved.</p>
+        </div>
+        <div class="footer-confidential">
+            📄 이 리포트는 <strong>홍지민 학생</strong>을 위해 PS:LAB이 개인 맞춤으로 제작한 문서입니다.
+        </div>
+    </footer>
+
+</div>
+
+<!-- ═══════════════ POPUP MODAL ═══════════════ -->
+<div id="popupModal" class="modal-overlay" onclick="closePopup(event)">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closePopup(event, true)">✕</button>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
