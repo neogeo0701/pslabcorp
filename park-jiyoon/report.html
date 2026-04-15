@@ -1,0 +1,627 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박지윤 학생을 위한 PS:LAB 분석 보고서</title>
+    <meta name="description" content="PS:LAB이 제공하는 박지윤 학생 맞춤형 퍼스널 입시 분석 리포트 — 대외비 문서">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="report-wrapper">
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <header class="hero-section">
+        <div class="hero-top-bar">
+            <span class="pslab-brand">PS:LAB</span>
+            <span class="hero-date">2026년 4월 발행</span>
+        </div>
+        <div class="hero-logos">
+            <div class="hero-logo-block">
+                <img src="assets/ku.png" alt="고려대" class="hero-logo-img">
+                <span class="hero-logo-label">고려대 경영학부</span>
+            </div>
+            <span class="hero-logo-arrow">·</span>
+            <div class="hero-logo-block">
+                <img src="assets/khu.png" alt="경희대" class="hero-logo-img">
+                <span class="hero-logo-label">경희대 이과대학</span>
+            </div>
+        </div>
+        <h1 class="hero-main-title">
+            <span class="hero-subtitle">PS:LAB REPORT</span>
+            박지윤 학생을 위한<br>
+            <em>퍼스널 입시 분석 보고서</em>
+        </h1>
+        <p class="slogan">"데이터를 기반으로 설계하고, 입학사정관의 시선으로 완성합니다."</p>
+        <div class="hero-meta-row">
+            <div class="hero-chip">담당 멘토: 유준환 · 고대현</div>
+            <div class="hero-chip">상일여자고등학교 3학년</div>
+            <div class="hero-chip personal-chip">📄 개인 맞춤 리포트</div>
+        </div>
+    </header>
+
+    <!-- ═══════════════ TOC ═══════════════ -->
+    <nav class="toc-section">
+        <p class="toc-label">목차 · CONTENTS</p>
+        <div class="toc-grid">
+            <a href="#overview" class="toc-item"><span>01</span> CONSULTING OVERVIEW</a>
+            <a href="#data-analysis" class="toc-item"><span>02</span> ACADEMIC DATA ANALYSIS</a>
+            <a href="#evaluation" class="toc-item"><span>03</span> STUDENT RECORD EVALUATION</a>
+            <a href="#roadmap" class="toc-item"><span>04</span> TARGET UNIVERSITY ROADMAP</a>
+            <a href="#action-plan" class="toc-item"><span>05</span> 3-1 ACTION PLAN</a>
+            <a href="#mentors-tip" class="toc-item"><span>06</span> MENTOR'S SPECIAL TIP</a>
+        </div>
+    </nav>
+
+    <!-- ═══════════════ 01 CONSULTING OVERVIEW ═══════════════ -->
+    <section class="report-section" id="overview">
+        <div class="section-header">
+            <span class="section-num">01</span>
+            <h2 class="section-title">CONSULTING OVERVIEW</h2>
+        </div>
+
+        <!-- PS:LAB 팀 소개 (간략) -->
+        <div class="pslab-intro-box">
+            <div class="pslab-intro-text">
+                <h3>안녕하세요, <strong>PS:LAB</strong>입니다.</h3>
+                <p>서울대 · 고려대 · 한양대 · 경희대 재학 중인 선배들이 모인 입시 전략 팀입니다. 직접 겪어낸 강남·송파 입시의 정답을 <strong>'데이터 리포트'</strong>로 전달하며, 합리적인 비용으로 최고의 퀄리티를 보장합니다.</p>
+            </div>
+                                                            <div class="pslab-strengths">
+                <div class="strength-item">
+                    <span class="s-icon">🤖</span>
+                    <div>
+                        <strong>완벽한 AI Workspace</strong>
+                        <p>고도화된 AI 환경으로 방대한 입시 데이터를 크로스체크합니다.</p>
+                    </div>
+                </div>
+                <div class="strength-item">
+                    <span class="s-icon">🎯</span>
+                    <div>
+                        <strong>추상적인 조언 배제</strong>
+                        <p>당장 실행 가능한 디테일만 제공합니다.</p>
+                    </div>
+                </div>
+                <div class="strength-item">
+                    <span class="s-icon">💡</span>
+                    <div>
+                        <strong>거품을 뺀 합리적 비용</strong>
+                        <p>명문대 합격생이 직접 작성하는 고퀄리티 리포트.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="process-section">
+            <h3 class="subsection-title">체계적인 3단계 리포트 솔루션</h3>
+            <div class="process-steps">
+                <div class="process-step active">
+                    <div class="step-num">STEP 1</div>
+                    <div class="step-icon">🔬</div>
+                    <h4>정밀 데이터 분석</h4>
+                    <p>생기부를 입학사정관의 시선에서 냉정하게 평가하여 보완할 수 있는 핵심 키워드를 도출합니다.</p>
+                    <div class="step-badge">현재 단계</div>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="process-step">
+                    <div class="step-num">STEP 2</div>
+                    <div class="step-icon">🗺️</div>
+                    <h4>스토리보드 기획</h4>
+                    <p>목표 대학 인재상에 완벽히 부합하는 방향성을 설정하고 탐구 및 독서 활동을 설계합니다.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="process-step">
+                    <div class="step-num">STEP 3</div>
+                    <div class="step-icon">📋</div>
+                    <h4>실전 리포팅 &amp; 피드백</h4>
+                    <p>실제 학교 활동에 바로 적용할 수 있는 디테일한 가이드 리포트를 제공하며 피드백을 진행합니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 학생 프로필 + 담당 멘토 -->
+        <div class="two-column" style="margin-top: 30px;">
+            <div class="col card">
+                <h3 class="col-title">🎓 학생 프로필</h3>
+                <ul class="info-list">
+                    <li><span class="info-label">이름</span> 박지윤</li>
+                    <li><span class="info-label">소속</span> 상일여자고등학교 3학년</li>
+                    <li><span class="info-label">진로</span> <strong class="grade-display" style="font-size:1rem;">글로벌 커뮤니케이션</strong> <em class="tag ok">미디어·홍보·마케팅 전문가</em></li>
+                    <li><span class="info-label">모의고사</span> 국2 / 수3 / 영2 / 탐2 <em class="tag down">수학 성적이 상위권 최저의 변수</em></li>
+                    <li><span class="info-label">내신</span> <strong class="grade-display">2.66등급</strong> <em class="tag down">1학년 2.30 → 2학년 3.15 지속 하락 중</em></li>
+                    <li><span class="info-label">비고</span> 질병결석 1회, 미인정 사유 없음 / 1~2학년 봉사 12시간</li>
+                </ul>
+                <div class="target-summary">
+                    <p class="target-title">🎯 지원 전략 분류 (수능 최저 없는 학종 우선)</p>
+                    <div class="target-row"><strong>학종 상향:</strong> 중앙대(영어영문/글로벌), 경희대(국제학과)</div>
+                    <div class="target-row"><strong>학종 핵심:</strong> 숙명여대(홍보광고), 건국대(미디어)</div>
+                    <div class="target-row"><strong>학종/교과 적정:</strong> 세종대(호텔관광경영학부), 동국대</div>
+                    <div class="target-row"><strong>안정 카드:</strong> 국민대, 숭실대</div>
+                </div>
+            </div>
+            <div class="col card">
+                <h3 class="col-title">👨‍💼 담당 멘토진</h3>
+                <div class="mentor-list">
+                    <div class="mentor-item" onclick="openPopup('mentor1')">
+                        <div class="mentor-logo-wrap">
+                            <img src="assets/ku.png" alt="고려대" class="mentor-univ-logo">
+                        </div>
+                        <div class="mentor-info">
+                            <div class="mentor-name">유준환 <span class="mentor-tag">고려대 경영학부</span></div>
+                            <p>글로벌 경영/마케팅 세특 심화 전문 · 학종 스토리텔링 설계</p>
+                        </div>
+                        <span class="mentor-arrow">›</span>
+                    </div>
+                    <div class="mentor-item" onclick="openPopup('mentor2')">
+                        <div class="mentor-logo-wrap">
+                            <img src="assets/khu.png" alt="경희대" class="mentor-univ-logo">
+                        </div>
+                        <div class="mentor-info">
+                            <div class="mentor-name">고대현 <span class="mentor-tag">경희대 이과대학 26학번</span></div>
+                            <p>전략적 수능 최저/내신 방어선 구축 · 현실적 입결 분석</p>
+                        </div>
+                        <span class="mentor-arrow">›</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ 02 ACADEMIC DATA ANALYSIS ═══════════════ -->
+    <section class="report-section" id="data-analysis">
+        <div class="section-header">
+            <span class="section-num">02</span>
+            <h2 class="section-title">ACADEMIC DATA ANALYSIS</h2>
+        </div>
+
+        <div class="two-column">
+            <div class="col card">
+                <h3 class="col-title">📈 학기별 내신 추이</h3>
+                <div class="chart-container">
+                    <canvas id="gradeChart"></canvas>
+                </div>
+                <div class="chart-summary-box">
+                    <div class="chart-summary-item">
+                        <span class="csi-label">전체 평균</span>
+                        <span class="csi-value primary">2.52</span>
+                    </div>
+                    <div class="chart-summary-item">
+                        <span class="csi-label">최고 성적</span>
+                        <span class="csi-value safe">1.86</span>
+                    </div>
+                    <div class="chart-summary-item">
+                        <span class="csi-label">3-1 목표</span>
+                        <span class="csi-value up-text">1.5 진입</span>
+                    </div>
+                </div>
+                <p class="chart-desc">1학년 초반 1.86의 우수한 성적을 보였으나 2학년 1학기에 3.00까지 하락했습니다. 다행히 2-2학기 2.88로 반등하며 하락세를 멈춘 흐름은 긍정적입니다. 3학년 1학기 대반전이 핵심입니다.</p>
+
+                <div class="memo-box alert" style="margin-top:15px;">
+                    ⚠️ [위험 요소] 이공계 지원자로서 <strong>수학, 과학 내신이 전체 내신에 비해 낮습니다.</strong> 화학I 5등급은 환경공학 지원 시 명백한 리스크이므로 3학년 화학II, 탐구 과목 성적 향상이 시급합니다. 
+                </div>
+            </div>
+            <div class="col card">
+                <h3 class="col-title">📊 교과 등급 및 모의고사 진단</h3>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>과목</th>
+                                <th>1-1</th>
+                                <th>1-2</th>
+                                <th>2-1</th>
+                                <th>2-2</th>
+                                <th>모의고사</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-important">
+                                <td><strong>국어</strong></td>
+                                <td class="cell-best">2</td><td class="cell-best">2</td><td class="cell-best">1</td><td class="cell-best">2</td>
+                                <td class="cell-target">4등급</td>
+                            </tr>
+                            <tr class="row-important">
+                                <td><strong>수학</strong></td>
+                                <td class="cell-best">2</td><td>3</td><td>3</td><td>4</td>
+                                <td class="cell-target">4등급</td>
+                            </tr>
+                            <tr>
+                                <td><strong>영어</strong></td>
+                                <td class="cell-best">1</td><td class="cell-best">1</td><td>3</td><td class="cell-best">1</td>
+                                <td class="cell-best">2등급</td>
+                            </tr>
+                            <tr>
+                                <td><strong>한국사</strong></td>
+                                <td class="cell-best">1</td><td class="cell-best">1</td><td class="cell-best">2</td><td class="cell-best">1</td>
+                                <td class="cell-target">4등급</td>
+                            </tr>
+                            <tr>
+                                <td><strong>통합사회</strong></td>
+                                <td class="cell-best">1</td><td class="cell-best">2</td><td>-</td><td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr class="row-important">
+                                <td><strong>과학 (화학1)</strong></td>
+                                <td class="cell-best">2</td><td>3</td><td class="cell-target">5</td><td>3</td>
+                                <td class="cell-target">4등급</td>
+                            </tr>
+                            <tr class="row-important">
+                                <td><strong>과학 (생명과학1)</strong></td>
+                                <td>-</td><td>-</td><td class="cell-best">2</td><td class="cell-best">2</td>
+                                <td class="cell-target">4등급</td>
+                            </tr>
+                            <tr class="row-important">
+                                <td><strong>과학 (지구과학1)</strong></td>
+                                <td>-</td><td>-</td><td>3</td><td>4</td>
+                                <td class="cell-target">3등급</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-legend">
+                    <span class="legend-item target">★ 실전 최저 리스크</span>
+                    <span class="legend-item best">✦ 강점 과목</span>
+                </div>
+                <div class="subject-analysis">
+                    <div class="subject-bar">
+                        <span class="sb-label">학종 평가 (최저 없음)</span>
+                        <div class="sb-track"><div class="sb-fill green" style="width:85%"></div></div>
+                        <span class="sb-note ok">중경시/서성한 도전 가능</span>
+                    </div>
+                    <div class="subject-bar">
+                        <span class="sb-label">교과/수능 (최저 있음)</span>
+                        <div class="sb-track"><div class="sb-fill red" style="width:30%"></div></div>
+                        <span class="sb-note warn">수능 최저 불가능</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ 03 STUDENT RECORD EVALUATION ═══════════════ -->
+    <section class="report-section" id="evaluation">
+        <div class="section-header">
+            <span class="section-num">03</span>
+            <h2 class="section-title">STUDENT RECORD EVALUATION</h2>
+        </div>
+
+        <div class="eval-grid">
+            <div class="eval-card">
+                <div class="eval-icon">📚</div>
+                <div class="eval-badge">학업역량</div>
+                <h3>일반고를 압도하는 탐구력</h3>
+                <ul class="eval-list">
+                    <li><strong>수학적 모델링</strong> 1학년 세특은 피상적이나, 수학II에서 SIR 모델·로지스틱 함수로 감염병 확산을 분석한 것은 정점을 찍은 훌륭한 활동.</li>
+                    <li><strong>집요한 실험 태도</strong> 비스페놀A 노출 실험(45일 투자), 토양 채취 및 분석 등 의문을 실험으로 검증하는 수준이 자사고급.</li>
+                    <li><strong>비판</strong> 반면 생명과학 '드럭 리포지셔닝' 탐구 등 동기가 결여된 나열식 탐구는 1500바이트 낭비입니다. 3학년엔 <strong>하나의 활동을 길고 깊게</strong> 쓰세요.</li>
+                </ul>
+                <div class="memo-box alert">모의고사가 4등급대입니다. 영어 2등급을 제외하고 최저를 맞출 과목이 없습니다. 탐구 집중 관리가 필수입니다.</div>
+            </div>
+            <div class="eval-card">
+                <div class="eval-icon">🧭</div>
+                <div class="eval-badge">진로역량</div>
+                <h3>의·약학 ➔ 환경공학 자연스런 전환</h3>
+                <ul class="eval-list">
+                    <li><strong>진로 전환</strong> 1학년 화학생명공학 → 2학년 환경공학 전환은 매우 성공적. 억지 연계 없이 교과 역량을 살리는 정석적 접근입니다.</li>
+                    <li><strong>환경공학 실천</strong> 마늘 항균 실험, 칡 액비 제작, 오징어뼈 플라스틱, 해양 쓰레기 죽방렴 포집 등 직접 구현하고 행동하는 역량이 만점 수준.</li>
+                    <li><strong>보완점</strong> 2학년까지 화학(pH, 완충용액 등)과 환경을 연결짓는 분자/결합 수준의 화학적 깊이가 부족합니다. 3학년엔 이를 심화해야 합니다.</li>
+                </ul>
+            </div>
+            <div class="eval-card">
+                <div class="eval-icon">🤝</div>
+                <div class="eval-badge">공동체역량</div>
+                <h3>행동특성 및 리더십</h3>
+                <ul class="eval-list">
+                    <li><strong>지속적 문제해결</strong> 자치회 간부로서 급식 잔반(ENOUGH 캠페인), 교실 약품함 등 단편적 요구를 해결 가능한 대안으로 승화.</li>
+                    <li><strong>팀워크 리더십</strong> 45일간의 팀 실험 완료, 진로 탐구를 학급 캠페인으로 확산시켜 소통과 신뢰를 이끄는 이상적 행발 서술.</li>
+                    <li><strong>조언</strong> 이미 2학년까지 행발과 공동체 역량이 차고 넘칩니다. 3학년엔 비교과 시간을 확 줄이고 수능/내신에 매진하십시오.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="memo-box focus-memo">
+            <strong>💬 MEMO:</strong> 정은 학생의 무기는 <strong>'수능 공부 할 시간 없이 연구에만 매진한 과학고 학생'</strong> 같은 압도적인 생기부 퀄리티입니다. 수능 최저가 없는 <strong>탐구형/면접형 학종</strong>(중앙대 탐구형, 경희대 네오르네상스 등)에 최우선적으로 지원 카드를 설계해야 하며, 면접에서 학생의 풍부한 탐구 체화량이 빛을 발할 것입니다.
+        </div>
+
+        <!-- 세특 분석 서브섹션 -->
+        <div class="setech-section">
+            <h3 class="subsection-title">📋 세특 현황 — 3학년 전략 방향</h3>
+
+            <div class="setech-grid">
+                <div class="setech-card sc-high">
+                    <div class="sc-subject">수학 II / 미적분 ★★★</div>
+                    <div class="sc-content">SIR 모델, 회생제동 에너지 <em>→ 매우 우수함. 내신 점수만 보완된다면 이공계 합격 프리패스 요소.</em></div>
+                </div>
+                <div class="setech-card sc-high">
+                    <div class="sc-subject">자율·진로 활동 ★★★</div>
+                    <div class="sc-content">칡 액비, 오징어뼈 플라스틱, EM 흙공 투척 <em>→ 압도적. 다만 화학적 관점(분자구조)의 분석이 누락된 점이 아쉬움.</em></div>
+                </div>
+                <div class="setech-card sc-high">
+                    <div class="sc-subject">자율 동아리 ★★☆</div>
+                    <div class="sc-content">45일 비스페놀A 실험, 죽방렴 해양쓰레기 포집 <em>→ 자사고를 능가하는 탐구력. 3학년엔 개수를 줄이고 깊이를 팔 것.</em></div>
+                </div>
+                <div class="setech-card sc-mid">
+                    <div class="sc-subject">생명·화학 I ★★☆</div>
+                    <div class="sc-content">드럭 리포지셔닝 등 <em>→ GPT가 추천해 준 듯한, 동기가 없는 피상적 나열. 3학년엔 무조건 1개 탐구를 깊게 쓸 것.</em></div>
+                </div>
+                <div class="setech-card sc-mid">
+                    <div class="sc-subject">영어·기타 교과 ★★☆</div>
+                    <div class="sc-content">영어 발표, 이클립스 앱 기획(유연화) <em>→ 언어 능력과 프로젝트 역량이 잘 정리됨. 등급이 약한 과목 위주로 세특 챙길 것.</em></div>
+                </div>
+                <div class="setech-card sc-low">
+                    <div class="sc-subject">1학년 수학 등 기초 교과 ★☆☆</div>
+                    <div class="sc-content">허수단위 겉핥기 등 <em>→ 깊이가 한 줄로 끝나는 활동은 디메릿 위험. 차라리 삭제하거나 다른 걸 했어야 함.</em></div>
+                </div>
+            </div>
+
+            <div class="setech-insight">
+                💡 <strong>3학년 세특 제안:</strong> 남해제일고는 물화생지를 모두 배우는 훌륭한 인프라를 갖췄습니다. 3학년엔 여러 활동을 벌이는 대신 <strong>각 과탐 과목 당 딱 1개의 임팩트 있는 탐구</strong>(1500바이트 분량)로 깊이를 채우고, 남는 모든 시간을 <strong>국/수/영/탐 수능 공부와 내신 문제집 풀이</strong>에 쏟아 부어야 합니다.
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ 04 TARGET UNIVERSITY ROADMAP ═══════════════ -->
+    <section class="report-section" id="roadmap">
+        <div class="section-header">
+            <span class="section-num">04</span>
+            <h2 class="section-title">TARGET UNIVERSITY ROADMAP</h2>
+        </div>
+
+        <div class="roadmap-table-wrap">
+            <table class="roadmap-table">
+                <thead>
+                    <tr>
+                        <th>분류</th>
+                        <th>대학 (추천 전형)</th>
+                        <th>목표 학과</th>
+                        <th>수능 최저</th>
+                        <th>핵심 전략</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row-push">
+                        <td><span class="badge-pill push">소신</span></td>
+                        <td><strong>서강대 · 성균관대 · 한양대</strong><br><small style="color:var(--text-sub);font-size:0.8rem;">농어촌 특별 / 학종</small></td>
+                        <td>건설환경 / 자원환경공학</td>
+                        <td>최저 없음</td>
+                        <td>농어촌 지원 가능 시 합격 확률 대폭 상승</td>
+                    </tr>
+                    <tr class="row-push">
+                        <td><span class="badge-pill push">소신</span></td>
+                        <td><strong>중앙대 · 경희대 · 서울시립대</strong><br><small style="color:var(--text-sub);font-size:0.8rem;">CAU탐구형 / 네오르네상스</small></td>
+                        <td>건설환경플랜트 / 환경학</td>
+                        <td>최저 거의 없음</td>
+                        <td><strong>핵심 최우선 카드.</strong> 면접에서 강력한 탐구 깊이로 합격 압살 가능</td>
+                    </tr>
+                    <tr class="row-safe">
+                        <td><span class="badge-pill safe">적정</span></td>
+                        <td><strong>건국대 · 동국대</strong><br><small style="color:var(--text-sub);font-size:0.8rem;">학종 (면접 유의)</small></td>
+                        <td>사회환경공학 / 화공생물</td>
+                        <td>최저 없음</td>
+                        <td>복수 지원 남발 금지. 건동홍 라인은 1장만 소신 지원</td>
+                    </tr>
+                    <tr class="row-safe">
+                        <td><span class="badge-pill safe">안정</span></td>
+                        <td><strong>인하대 · 아주대 · 국민대</strong><br><small style="color:var(--text-sub);font-size:0.8rem;">학종 / 교과</small></td>
+                        <td>환경공 / 환경안전 / 산림환경</td>
+                        <td>전형별 상이</td>
+                        <td>안전망 확보용. 면접과 수능 최저 여부 교차 확인</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="memo-box focus-memo" style="margin-top: 20px;">
+            <strong>💬 MEMO:</strong> 남해제일고등학교 출신으로 <strong>농어촌 전형</strong> 지원 자격이 성립된다면, 서성한 라인의 농어촌 카드를 최우선으로 배치하세요. 모의고사가 약하므로 무조건 수능 최저가 없는 학종(서류+면접형)이 주력입니다.
+        </div>
+    </section>
+
+    <!-- ═══════════════ 05 3-1 ACTION PLAN ═══════════════ -->
+    <section class="report-section" id="action-plan">
+        <div class="section-header">
+            <span class="section-num">05</span>
+            <h2 class="section-title">3-1 ACTION PLAN</h2>
+        </div>
+        <p class="sub-desc">카드를 클릭하면 세부 실행 계획을 확인할 수 있습니다.</p>
+
+        <div class="action-grid">
+            <div class="action-card" onclick="openPopup('action1')">
+                <div class="action-num">최우선</div>
+                <div class="subject-tag">내신·수능 방어</div>
+                <h3>수·과탐 내신 사수 및<br>실전 모의고사 루틴 확립</h3>
+                <p class="action-preview">생기부가 만점이어도 수과탐 내신이 밀리면 이공계 경쟁에서 탈락합니다. 화학1 5등급의 오명을 3학년 때 씻어냅니다.</p>
+                <ul class="action-detail-list">
+                    <li>국어, 영어 외 과탐 성적 향상 최우선</li>
+                    <li>모의고사 4/4/2/4 탈출을 위한 탐구 집중</li>
+                    <li>목표: 3-1학기 전체내신 1.5 진입</li>
+                </ul>
+                <span class="click-more">세부 계획 보기 →</span>
+            </div>
+            <div class="action-card" onclick="openPopup('action2')">
+                <div class="action-num">탐구 1</div>
+                <div class="subject-tag">화학 II 연계 극대화</div>
+                <h3>오징어뼈 생분해 플라스틱<br>화학 결합 및 분자 구조 딥다이브</h3>
+                <p class="action-preview">2학년 때 그저 '만들었다'로 끝난 실험을 화학적인 관점(공유결합, 분자구조 변화)에서 낱낱이 파헤쳐 1500자 소논문 작성</p>
+                <ul class="action-detail-list">
+                    <li>화학적 스토리텔링 부여</li>
+                    <li>기존 생분해 플라스틱과 정량 비교</li>
+                    <li>화학 II 과세특 1500바이트 독점 기재</li>
+                </ul>
+                <span class="click-more">세부 계획 보기 →</span>
+            </div>
+            <div class="action-card" onclick="openPopup('action3')">
+                <div class="action-num">탐구 2</div>
+                <div class="subject-tag">환경·화학 융합</div>
+                <h3>pH 기반 완충용액 성질을 활용한<br>산업 폐수 처리 시스템 연구</h3>
+                <p class="action-preview">화학적 지식을 실제 수질 환경 공학에 적용하여 화학 5등급의 오점을 전문성으로 상쇄하는 핵심 탐구</p>
+                <ul class="action-detail-list">
+                    <li>진로와직업 / 과탐실 / 생명 연계</li>
+                    <li>산-염기 완충용액 모델링</li>
+                    <li>화학-환경공학 자연스런 네러티브 완성</li>
+                </ul>
+                <span class="click-more">세부 계획 보기 →</span>
+            </div>
+        </div>
+
+        <div class="action-grid" style="margin-top:16px;">
+            <div class="action-card" onclick="openPopup('action4')">
+                <div class="action-num">탐구 3</div>
+                <div class="subject-tag">미적분 · 유체역학 연계</div>
+                <h3>유체역학 기반 해양 쓰레기 포집<br>오류율 최소화 모델링</h3>
+                <p class="action-preview">미적분학을 활용하여 조류의 흐름과 죽방렴의 형태적 저항력을 수리적으로 증명</p>
+                <ul class="action-detail-list">
+                    <li>미적분 세특 연계</li>
+                    <li>최적의 면적과 각도 계산 과정 추가</li>
+                    <li>단순 제작을 수학적 증명으로 상향</li>
+                </ul>
+                <span class="click-more">세부 계획 보기 →</span>
+            </div>
+            <div class="action-card" onclick="openPopup('action5')">
+                <div class="action-num">탐구 4</div>
+                <div class="subject-tag">정보 · 환경 지표</div>
+                <h3>환경지표 스마트 모니터링<br>시나리오 체계화</h3>
+                <p class="action-preview">정보/코딩 역량을 활용하여 데이터 기반 환경공학자의 면모를 보이는 시나리오 로직 트리 완성</p>
+                <ul class="action-detail-list">
+                    <li>산불 복원 실험과 IT 기술 연계</li>
+                    <li>원격 실시간 지수 모니터링 구상</li>
+                    <li>컴퓨팅 사고력을 증명하는 로직트리</li>
+                </ul>
+                <span class="click-more">세부 계획 보기 →</span>
+            </div>
+            <div class="action-card" onclick="openPopup('action6')">
+                <div class="action-num">독서</div>
+                <div class="subject-tag">공학 독서 · 세특 심화</div>
+                <h3>환경공학 연계 독서 2권<br>독서록 작성 및 세특 확장</h3>
+                <p class="action-preview">환경공학과 직접 연결되는 도서를 읽고 공학적 비판 시각을 세특에 강력히 녹여내기</p>
+                <ul class="action-detail-list">
+                    <li>추천: 『침묵의 봄』 심화, 『기후위기와 인권』</li>
+                    <li>독서록 A4 1매, 단골 선생님 제출</li>
+                    <li>화학, 생명과학 세특 공통 연계</li>
+                </ul>
+                <span class="click-more">세부 계획 보기 →</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ 06 MENTOR'S SPECIAL TIP ═══════════════ -->
+    <section class="report-section" id="mentors-tip">
+        <div class="section-header">
+            <span class="section-num">06</span>
+            <h2 class="section-title">MENTOR'S SPECIAL TIP</h2>
+        </div>
+
+        <div class="two-column">
+            <div class="col">
+                <div class="quote-card">
+                    <div class="quote-mentor-header">
+                        <img src="assets/hyu.png" alt="한양대" class="quote-univ-logo">
+                        <div>
+                            <h4>배제욱</h4>
+                            <span class="quote-role">한양대 자연과학대학 화학과</span>
+                        </div>
+                    </div>
+                    <p>"진로를 생명에서 환경으로 갑자기 틀어서 걱정하시나요? 괜찮습니다. 저 역시 1학년 때 로봇공학에서 2학년 때 화학과로 틀었지만 합격했습니다. 중요한 건 무조건 진정성 있는 '동기'입니다. 남들이 다하는 복붙식 동기(드럭 리포지셔닝 등) 말고, 일상 속 자연스러운 궁금증만이 입학사정관을 움직입니다."</p>
+                </div>
+
+                <div class="detailed-feedback-container">
+                    <div class="feedback-header">
+                        <span class="fi-icon">🔎</span>
+                        <h4>배제욱 멘토의 심화 탐구 전략</h4>
+                    </div>
+                    <div class="feedback-list">
+                        <div class="feedback-item">
+                            <div class="fi-content">
+                                <span class="fi-tag green">동아리</span>
+                                <p class="fi-text">선생님께 방과 후 교실 개방을 부탁드리고, 친구들과 함께 실험한 것을 활용하면 주도성 면에서 완벽합니다.</p>
+                            </div>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="fi-content">
+                                <span class="fi-tag orange">화학 분석</span>
+                                <p class="fi-text">오징어 뼈 플라스틱 실험은 좋으니 분자구조, 화학결합 등 <strong>화학적 스토리</strong>를 깊게 파세요.</p>
+                            </div>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="fi-content">
+                                <span class="fi-tag blue">개수 조절</span>
+                                <p class="fi-text">자율, 동아리, 진로는 각 활동 2개씩만 하면 충분합니다. 여러 개 나열하지 마세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quote-card">
+                    <div class="quote-mentor-header">
+                        <img src="assets/khu.png" alt="경희대" class="quote-univ-logo">
+                        <div>
+                            <h4>고대현</h4>
+                            <span class="quote-role">경희대 이과대학 26학번</span>
+                        </div>
+                    </div>
+                    <p>"내신 2.52는 농어촌 전형에서 무서운 무기입니다. 특히 남해제일고라는 우수한 환경이라면 말이죠. 3학년 1학기 수학 1등급 탈환 시 최상위권 대학 '기회균형' 전형까지 노려볼 수 있는 엄청난 잠재력이 있습니다. 농어촌 전형과 탐구형 면접 전형을 섞는 하이브리드 전략이 합격의 열쇠입니다."</p>
+                </div>
+
+                <div class="quote-card">
+                    <div class="quote-mentor-header">
+                        <img src="assets/hyu.png" alt="한양대" class="quote-univ-logo">
+                        <div>
+                            <h4>전동훈</h4>
+                            <span class="quote-role">한양대 공과대학 26학번</span>
+                        </div>
+                    </div>
+                    <p>"냉정하게, 전체 내신에 비해 수학·과학 성적이 유독 낮습니다. 이공계 생기부의 생명은 탐구가 아니라 수/과 성적입니다. 3학년 땐 탐구, 비교과 늘리지 마세요. 성적이 낮으면 무조건 동일 라인 경쟁자에게 밀립니다. 국어, 영어를 포기하더라도 탐구와 수학 등급을 사수하세요."</p>
+                </div>
+
+            </div>
+            <div class="col summary-col">
+                <div class="summary-label">최종 총평</div>
+                <h3>정은 학생을 위한 종합 제언</h3>
+
+                <p class="summary-text">박지윤 학생의 서류는 자사고에 견주어도 손색없는, 일반고 최고 수준의 <strong>집요한 실험·탐구 실행력</strong>을 증명하고 있습니다. 45일간의 비스페놀A 실험, 직접 발로 뛴 칡 액비와 죽방렴 해양쓰레기 탐구는 입학사정관들이 가장 좋아할 <strong>'의문을 실험으로 검증하는 진취성'</strong> 그 자체입니다. </p>
+
+                <p class="summary-text"><strong>첫째, 3학년 비교과를 과감히 버리고 수능과 내신에 올인하세요.</strong> 생기부는 이대로도 넘칩니다. 그러나 모의고사 4등급대, 화학 5등급은 이 화려한 생기부를 휴지조각으로 만들 치명적인 리스크입니다. 가장 큰 숙제는 탐구 1~2개만 깊게 파서 기재하고, 남는 모든 시간을 수학, 과탐 개념서와 수능 모의고사에 투자하는 것입니다.</p>
+
+                <p class="summary-text"><strong>둘째, '농어촌 전형'과 '탐구/면접형 학종'이 정답입니다.</strong> 수능 최저를 요구하는 교과전형이나 학종을 안정 지원하기엔 리스크가 너무 큽니다. 반면 <중앙대 CAU 탐구형인재>, <경희대 네오르네상스> 등 수능 최저 없이 면접이 있는 전형은 정은 학생의 풍부한 탐구 지식을 면접장에서 마음껏 뽐낼 수 있는 최고의 무대입니다. 면접형 학종을 소신 카드(사실상 안정)로 쓰십시오.</p>
+
+                <p class="summary-text"><strong>셋째, 화학적 뎁스(Depth)를 더하십시오.</strong> 환경공학은 태생적으로 화학 기반입니다. 지금까지의 활동이 '제작'에 그쳤다면 3학년 땐 분자구조, pH, 이온결합 등의 진짜 교과 내용이 활동 속에 녹아들게 설계하십시오. 얕게 여러 개가 아닌, '하나를 길고 아주 깊게' 쓰는 것이 3학년 생기부의 원칙입니다.</p>
+
+                <p class="summary-quote">"화려한 활동은 이미 끝났습니다. 이제는 단단한 점수로 그 활동들을 현실의 합격증으로 바꿔낼 시간입니다."</p>
+                <div class="summary-sig">— PS:LAB 팀원 일동 —</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="report-footer">
+        <div class="footer-top">
+            <div class="footer-brand">PS:LAB</div>
+            <div class="footer-links">
+                <a href="https://cafe.naver.com/labps" target="_blank" class="footer-link">💬 네이버 카페</a>
+                <a href="https://instagram.com/labps_official" target="_blank" class="footer-link">📱 @labps_official</a>
+            </div>
+        </div>
+        <div class="footer-info">
+            <p>발행일: 2026년 4월 &nbsp;|&nbsp; 담당: 전동훈 멘토 · 배제욱 멘토 · 고대현 멘토</p>
+            <p>© 2026 PS:LAB Analytics. All rights reserved.</p>
+        </div>
+        <div class="footer-confidential">
+            📄 이 리포트는 <strong>박지윤 학생</strong>을 위해 PS:LAB이 개인 맞춤으로 제작한 문서입니다. 무단 배포를 금합니다.
+        </div>
+    </footer>
+
+</div><!-- /report-wrapper -->
+
+<!-- ═══════════════ POPUP MODAL ═══════════════ -->
+<div id="popupModal" class="modal-overlay" onclick="closePopup(event)">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closePopup(event, true)">✕</button>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

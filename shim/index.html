@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS:LAB | 리포트 도착 안내</title>
+    <style>
+/* 
+   PS:LAB Color Theme (Modern, Data-Driven, Tech Startup)
+*/
+:root {
+    /* Palette: Monochrome + Trust Blue */
+    --color-primary: #111111; /* Deep Black for strong contrast */
+    --color-primary-light: #333333;
+    --color-accent: #2563eb; /* Trustworthy Tech Blue */
+    --color-accent-hover: #1d4ed8;
+    
+    --color-bg-main: #f8fafc; /* Very light slate/gray for modern feel */
+    --color-bg-light: #ffffff;
+    --color-bg-dark: #0f172a; /* Slate 900 */
+    
+    --color-text-main: #1e293b; /* Slate 800 */
+    --color-text-muted: #64748b; /* Slate 500 */
+    --color-text-light: #f1f5f9; /* Slate 100 */
+    
+    /* Typography */
+    --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-heading: 'Inter', var(--font-sans); /* Inter for English logo/headings */
+    
+    /* Variables */
+    --transition-standard: all 0.2s ease-in-out;
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+}
+
+/* Pretendard Font Import */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+/* Inter for English accents */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+/* Reset & Basic Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--color-text-main);
+    background-color: var(--color-bg-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    letter-spacing: -0.02em; /* Tighter letter spacing for modern look */
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.text-center { text-align: center; }
+.mt-4 { margin-top: 2rem; }
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    letter-spacing: -0.03em;
+    word-break: keep-all;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    font-weight: 400;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.bg-light {
+    background-color: var(--color-bg-light);
+}
+
+.bg-dark {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+}
+
+.bg-dark h2 {
+    color: var(--color-text-light);
+}
+
+.bg-dark .subtitle {
+    color: var(--color-text-muted);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.9rem 2.2rem;
+    border-radius: 50px; /* Pill shape for startup vibe */
+    font-weight: 600;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: var(--transition-standard);
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: white;
+    border-color: var(--color-accent);
+    box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn-outline:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    transition: var(--transition-standard);
+}
+
+.navbar.scrolled {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--color-accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+    background-color: var(--color-bg-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-main);
+    min-height: 80vh;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--color-accent);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 8vw, 3.8rem); /* Responsive font size */
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+}
+
+.hero p.hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    word-break: keep-all;
+}
+
+.cta-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Announcement Section */
+.announcement-section {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+.letter-box {
+    background-color: var(--color-bg-light);
+    padding: 3rem 4rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.letter-box h2 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.letter-box p {
+    font-size: 1rem;
+    color: var(--color-text-main);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.letter-box h3 {
+    font-size: 1.15rem;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-primary);
+}
+
+.schedule-list li {
+    padding-left: 1rem;
+    position: relative;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    color: var(--color-text-main);
+}
+
+.schedule-list li::before {
+    content: '-';
+    color: var(--color-accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* About Section & Mentors Grid */
+.mentors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.mentor-card {
+    background-color: var(--color-bg-light);
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    position: relative;
+    border: 1px solid #e2e8f0;
+    transition: var(--transition-standard);
+    display: flex;
+    flex-direction: column;
+}
+
+.mentor-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: var(--color-accent);
+    transform: translateY(-5px);
+}
+
+.mentor-logo {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    opacity: 0.9;
+}
+
+.mentor-role {
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.mentor-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.mentor-name .mentor-major {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    margin-top: 0.2rem;
+}
+
+.mentor-quote {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-main);
+    font-weight: 600;
+}
+
+.mentor-details {
+    margin-top: auto;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.mentor-details p {
+    margin-bottom: 0.3rem;
+}
+
+/* Process Section */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.process-card {
+    background-color: var(--color-bg-light);
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius-lg);
+    border: 1px solid #e2e8f0;
+    transition: var(--transition-standard);
+}
+
+.process-card:hover {
+    border-color: var(--color-accent);
+}
+
+.step-number {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+}
+
+.process-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.process-card p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    word-break: keep-all;
+}
+
+/* Contact Links */
+.contact-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+    transition: var(--transition-standard);
+}
+
+.contact-card:hover {
+    background-color: #334155;
+    transform: translateY(-3px);
+}
+
+.contact-card .icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-card h3 {
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.contact-card p {
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    word-break: keep-all;
+    padding: 0 10%;
+}
+
+.contact-card .btn-text {
+    color: var(--color-text-light);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-bg-dark);
+    color: #94a3b8;
+    padding: 3rem 0;
+    border-top: 1px solid #1e293b;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--color-text-light);
+}
+
+.footer-logo span {
+    color: var(--color-accent);
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+
+.fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Extra Mobile Optimizations */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero { padding-top: 6.5rem; padding-bottom: 4rem; min-height: auto; }
+    .hero h1 { margin-bottom: 1rem; }
+    .section { padding: 4rem 0; }
+    .process-grid, .contact-links { grid-template-columns: 1fr; gap: 1rem; }
+    .letter-box { padding: 2rem 1.5rem; }
+    .footer-content { flex-direction: column; gap: 1rem; text-align: center; }
+    .mentors-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .btn { width: 100%; text-align: center; padding: 0.8rem 1.5rem; }
+    .cta-group { flex-direction: column; width: 100%; gap: 0.8rem; }
+    .logo { font-size: 1.3rem; }
+    .pain-point-section h2 { font-size: 1.8rem !important; }
+}
+
+</style>
+    <style>
+        /* 추가 및 보완된 스타일 적용 (가독성 & 프리미엄 강화) */
+        body { margin-bottom: 0; }
+        
+        .delivery-hero {
+            padding-top: 10rem;
+            padding-bottom: 4rem;
+            text-align: center;
+        }
+        .hero-subtitle {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--color-text-main);
+            max-width: 650px;
+            margin: 1.5rem auto 0;
+            font-weight: 500;
+        }
+        
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto 5rem;
+            padding: 0 5%;
+        }
+
+        .report-cta-box {
+            background: #ffffff;
+            border: 2px solid rgba(37,99,235,0.15);
+            border-radius: var(--border-radius-lg);
+            padding: 3.5rem 2.5rem;
+            text-align: center;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+            margin-bottom: 4rem;
+            transition: transform 0.2s;
+        }
+        .report-cta-box:hover {
+            transform: translateY(-3px);
+            border-color: rgba(37,99,235,0.4);
+            box-shadow: 0 15px 35px rgba(37,99,235,0.1);
+        }
+        .report-cta-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        .report-cta-box p {
+            color: var(--color-text-muted);
+            margin-bottom: 2.5rem;
+            font-size: 1.15rem;
+        }
+        
+        /* 내용을 자유롭게 길게 넣을 수 있는 화이트보드형 디자인 */
+        .info-card {
+            background-color: #ffffff;
+            padding: 3.5rem 4rem;
+            border-radius: var(--border-radius-lg);
+            border: 1px solid #e2e8f0;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            text-align: left;
+        }
+        .info-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1.8rem;
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 800;
+        }
+        
+        /* 추가되는 글들의 가독성을 극대화하는 paragraph 설정 */
+        .info-card p {
+            color: var(--color-text-main);
+            line-height: 1.9;
+            font-size: 1.1rem;
+            margin-bottom: 1.3rem;
+            word-break: keep-all;
+        }
+        .info-card p:last-child {
+            margin-bottom: 0;
+        }
+        .info-card strong {
+            color: var(--color-primary);
+        }
+        
+        /* 플랜 섹션 (고급스러운 딥 다크 모드) */
+        .plan-section {
+            background-color: #0c111d; 
+            padding: 8rem 5%;
+            color: white;
+            border-top: 1px solid #1e293b;
+        }
+        .plan-section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        .plan-section-header h2 {
+            color: white;
+            font-size: 2.4rem;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.05em;
+        }
+        .plan-section-header p {
+            color: #94a3b8;
+            font-size: 1.15rem;
+        }
+        
+        /* 플랜 카드 구조: 동일한 높이 유지 및 버튼 하단 고정 */
+        .plan-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .plan-card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 3.5rem 2.5rem;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column; /* 추가: 버튼 하단 배치를 위한 flex */
+        }
+        .plan-card:hover {
+            transform: translateY(-8px);
+            border-color: #475569;
+            box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* 프리미엄 카드 VIP 스타일링 (은은한 골드/오렌지 빛) */
+        .plan-card.premium {
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            border: 1px solid rgba(217, 119, 6, 0.4);
+            box-shadow: 0 10px 30px rgba(217, 119, 6, 0.08); 
+        }
+        .plan-card.premium:hover {
+            border-color: rgba(217, 119, 6, 0.8);
+            box-shadow: 0 25px 50px rgba(217, 119, 6, 0.15); 
+        }
+        
+        .plan-badge {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #64748b;
+            color: white;
+            padding: 0.4rem 1.8rem;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            white-space: nowrap;
+        }
+        .plan-card.premium .plan-badge {
+            background: linear-gradient(90deg, #d97706, #f59e0b); 
+            color: #fff;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .plan-card h3 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+            text-align: center;
+        }
+        .plan-desc {
+            color: #94a3b8;
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+            text-align: center;
+            min-height: 50px;
+        }
+        
+        .plan-price {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .plan-price .original {
+            font-size: 1.15rem;
+            color: #64748b;
+            text-decoration: line-through;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .plan-price .current {
+            font-size: 2.8rem;
+            font-weight: 800;
+            font-family: var(--font-heading);
+            color: white;
+            line-height: 1;
+        }
+        .plan-price .discount {
+            font-size: 1.1rem;
+            color: #10b981;
+            margin-left: 0.5rem;
+            vertical-align: super; /* 위로 살짝 띄움 */
+            font-weight: 700;
+        }
+        
+        /* flex-grow를 주어 남는 공간을 차지하게 만들어, 아래쪽 요소(버튼)를 카드의 맨 바닥으로 밀어냄 */
+        .plan-features-wrapper {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        .feature-list li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 1.2rem;
+            color: #cbd5e1;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            word-break: keep-all;
+        }
+        .feature-list li strong {
+            color: white;
+            font-size: 1.1rem;
+        }
+        .feature-list li::before {
+            content: '✓';
+            color: var(--color-accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .plan-card.premium .feature-list li::before {
+            color: #f59e0b; /* 프리미엄 카드는 골드 체크마크 */
+        }
+        
+        .success-assurance {
+            background-color: rgba(217, 119, 6, 0.1);
+            border: 1px solid rgba(217, 119, 6, 0.3);
+            color: #fcd34d;
+            padding: 1.2rem;
+            border-radius: var(--border-radius-md);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-top: auto; /* 박스를 아래로 밂 */
+            margin-bottom: 2rem;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        /* 하단 안내 섹션 */
+        .closing-section {
+            padding: 7rem 5%;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .closing-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        
+        .contact-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 2.5rem 3rem;
+            border-radius: var(--border-radius-lg);
+            margin: 3rem auto;
+            text-align: left;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            width: 100%;
+            max-width: 650px;
+        }
+        .contact-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .contact-box li {
+            font-size: 1.15rem;
+            color: var(--color-text-main);
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
+        }
+        .contact-box li:last-child {
+            margin-bottom: 0;
+        }
+        .contact-box strong {
+            color: var(--color-primary);
+        }
+        
+        @media (max-width: 768px) {
+            .plan-grid { grid-template-columns: 1fr; }
+            .plan-card { padding: 2.5rem 1.5rem; }
+            .info-card { padding: 2.5rem 1.5rem; }
+            .hero-subtitle { font-size: 1rem; }
+            .contact-box { padding: 2rem 1.5rem; }
+            .pricing-notice { padding: 1.5rem 1.5rem !important; }
+        }
+
+        /* 프리미엄 보안 모달 스타일 */
+        .auth-modal-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(15, 23, 42, 0.85); /* 다크 오버레이 강화 */
+            backdrop-filter: blur(8px); /* 블러 강화 */
+            z-index: 1000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .auth-modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+        .auth-modal {
+            background: #1e293b; /* PS:LAB 다크 카드 배경 */
+            padding: 3rem 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1); /* 글래스모피즘 테두리 */
+            max-width: 420px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transform: translateY(20px);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .auth-modal-overlay.active .auth-modal {
+            transform: translateY(0);
+        }
+        /* 모달 인풋 플레이스홀더 텍스트 색상 */
+        .auth-modal input::placeholder {
+            color: #64748b;
+        }
+
+        /* 플로팅 카톡 1:1 상담 버튼 */
+        .floating-chat-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--color-primary), #1e40af);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 10px 25px rgba(37,99,235,0.4);
+            z-index: 900;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .floating-chat-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(37,99,235,0.6);
+            color: white;
+        }
+        .chat-icon { font-size: 1.3rem; }
+        @media (max-width: 768px) {
+            .floating-chat-btn { bottom: 20px; right: 20px; padding: 1rem; border-radius: 50%; }
+            .chat-text { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class='logo' href='/'>PS<span>:</span>LAB</a>
+        </div>
+    </nav>
+
+    <!-- 애니메이션은 과하지 않게 자연스러운 fade-in 위주로 변경 -->
+    <header class="delivery-hero fade-in-up">
+        <div class="container">
+            <span class="badge" style="background-color: var(--color-primary); color: white;">STEP 1. 정밀 데이터 분석 완료</span>
+            <h1 style="font-size: clamp(2rem, 5vw, 3rem); margin-top: 1.5rem; line-height: 1.35;">
+                귀하만을 위한<br><strong>생기부 전략 분석 리포트</strong> 구축 완료
+            </h1>
+            <p class="hero-subtitle">안녕하세요, PS:LAB입니다.<br>오랜 시간 기다려주셔서 감사합니다. 귀하의 학생부를 다각도로 투영하여<br>도출한 전략적 로드맵이 개인 전용 대시보드에 업로드되었습니다.</p>
+        </div>
+    </header>
+
+    <div class="content-container">
+        <!-- 
+            [텍스트 추가 영역] 
+            .info-card 내부에는 여러 개의 <p> 태그를 연속해서 작성하기만 하면 
+            줄간격 1.9의 매우 가독성 높은 형태로 글이 렌더링되도록 설계했습니다.
+            글이 아무리 길어져도 깔끔하게 유지됩니다.
+        -->
+        <div class="info-card reveal active">
+            <h4><span style="font-size: 1.6rem;">🔥</span> 72시간의 치열한 기록</h4>
+            <p>이번 리포트는 기계적인 시스템의 결과물이 아닙니다. 치열한 입시를 갓 뚫어낸 핵심 멘토들이 직접 머리를 맞대고 귀하의 생기부 모든 문장을 뜯어보며 맞춤형 전략을 세웠습니다.</p>
+            <p>방대한 전국 단위 합격 데이터를 보조적으로 크로스체크하는 데에만 시스템을 활용했을 뿐, 이 리포트의 본질은 결국 학교가 위치한 지역의 특수성까지 고려하여 <strong>'멘토진이 직접 빚어낸 72시간 이상의 지독한 노고'</strong>입니다. 선배들이 후배에게 전하는 진심 어린 전략서를 확인해 보세요.</p>
+        </div>
+
+        <div class="info-card reveal">
+            <h4><span style="font-size: 1.6rem;">🎯</span> STEP 1. 정밀 데이터 분석</h4>
+            <p>전달드린 리포트는 PSLAB 솔루션의 첫 번째 단계인 <strong>[정밀 데이터 분석]</strong> 결과입니다. 우리는 단순히 과거를 기록하는 것을 넘어, 당신의 데이터를 합격을 향한 핵심 동력으로 전환하는 데 집중했습니다.</p>
+            <p>이미 분석을 통해 귀하의 가능성을 확인했기에, 이제 분석을 넘어 실제 합격의 서사를 완성할 다음 단계를 제안합니다.</p>
+        </div>
+
+        <!-- 핵심 리포트 확인 버튼 박스 -->
+        <div class="report-cta-box reveal">
+            <div style="font-size: 3.5rem; margin-bottom: 1.5rem;">📊</div>
+            <h3>개인 맞춤형 대시보드가 준비되었습니다</h3>
+            <p>보안을 위해 본인 확인 절차가 필요할 수 있습니다.</p>
+            <!-- 인증 모달을 호출하는 버튼으로 변경됨 -->
+            <button onclick="openAuthModal()" class="btn btn-primary" style="padding: 1.2rem 3.5rem; font-size: 1.25rem; font-weight: 700; border-radius: 50px; border: none; cursor: pointer; color: white;">개별 리포트 입장하기</button>
+            <p style="margin-top: 1.5rem; font-size: 0.95rem; color: #fecaca; font-weight: 700; margin-bottom: 0;">※ 리포트 확인 후, 다시 이 페이지로 돌아와 하단의 [베타 한정 오퍼]를 반드시 확인해주세요!</p>
+        </div>
+    </div>
+
+    <!-- 유료 플랜 제안 섹션 -->
+    <section class="plan-section">
+        <div class="container reveal">
+            <div class="plan-section-header">
+                <h2>[Founding Member] 리미티드 오퍼</h2>
+                <p style="margin-bottom: 2rem;">오직 1기 베타테스터분들께만 제공되는 50% 선점 특별 혜택입니다.</p>
+                
+                <div class="pricing-notice" style="background-color: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--border-radius-md); padding: 1.5rem 2.5rem; max-width: 800px; margin: 0 auto; text-align: left; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
+                    <h4 style="color: #e2e8f0; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span>⚠️</span> 정식 런칭 이전, 1기 한정 특가 및 향후 정책 안내
+                    </h4>
+                    <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.6; word-break: keep-all; margin: 0; text-align: left;">
+                        현재 제공되는 50% 할인가 및 멘토진의 밀착 디렉팅 혜택은, 파운더들의 데이터 고도화에 기여해주시는 <strong>1기 베타테스터분들에 대한 특별한 감사의 의미를 담아 원가 이하로 책정된 한시적 특가</strong>입니다.<br><br>
+                        가장 최근 치열한 입시를 돌파한 최상위권 멘토진이 전담 투입되는 리소스 특성상, <strong>정식 런칭 시점부터는 서비스 제공 범위가 과목/횟수별로 강하게 제한되거나, 전체 금액이 최소 1.5배 이상 현실화(인상)될 예정</strong>입니다. PS:LAB의 모든 풀케어 혜택을 파격적인 가격으로 누리실 수 있는 한정된 기회를 놓치지 마세요. <span style="color: #f87171; font-weight: 600;">(※ 멘토진 컨디션 관리를 위해 선착순 조기 마감됩니다)</span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="plan-grid">
+                <!-- Standard Plan -->
+                <div class="plan-card">
+                    <div class="plan-badge">Standard</div>
+                    <h3>Architect Plan</h3>
+                    <p class="plan-desc">"단편적인 활동을 넘어, 합격으로 향하는<br>독보적인 서사를 구축합니다."</p>
+                    
+                    <div class="plan-price">
+                        <span class="original">정가 149,000원</span>
+                        <div class="current">74,500원 <span class="discount">50% ↓</span></div>
+                    </div>
+                    
+                    <!-- 혜택 내용 & 액션 버튼 래퍼 (높이 맞춤용) -->
+                    <div class="plan-features-wrapper">
+                        <ul class="feature-list">
+                            <li><strong>학업 역량과 전공 적합성의 입체적 결합 (Framing)</strong><br>단순 나열된 활동들을 유기적으로 연결하여 생기부 전체의 구조적 뼈대를 견고하게 완성</li>
+                            <li><strong>심화 탐구 메커니즘 설계</strong><br>지적 호기심의 확장을 증명할 수 있는 학기별 핵심 탐구 과제 파고들기 방향성 제시</li>
+                            <li><strong>[제공] 목표 대학 맞춤형 실전 로드맵 PDF 최종 발송</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 항상 카드 최하단에 버튼이 고정 배치됨 -->
+                    <a href="https://open.kakao.com/o/siqpqtli" target="_blank" class="btn btn-outline" style="width: 100%; text-align: center; padding: 1.1rem; border-color: #64748b; color: white; font-weight: 700; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.1)';" onmouseout="this.style.backgroundColor='transparent';">Standard 플랜 상담하기</a>
+                </div>
+
+                <!-- Premium Plan (VIP 전용 럭셔리 스타일링 적용됨) -->
+                <div class="plan-card premium" style="border: 1px solid var(--color-primary); box-shadow: 0 0 30px rgba(37, 99, 235, 0.15);">
+                    <div class="plan-badge">Premium Director</div>
+                    <h3>Director Plan</h3>
+                    <p class="plan-desc">"생기부의 모든 문장이 평가관의 확신이 되도록,<br>PSLAB이 전 과정을 직접 디렉팅합니다."</p>
+                    
+                    <div class="plan-price">
+                        <span class="original">정가 299,000원</span>
+                        <div class="current">149,500원 <span class="discount">50% ↓</span></div>
+                    </div>
+                    
+                    <div class="plan-features-wrapper">
+                        <ul class="feature-list">
+                            <li><strong>모든 문장의 완성도 극대화 (Refining)</strong><br>평범한 내용을 입학사정관을 설득하는 날카로운 합격 근거로 탈바꿈</li>
+                            <li><strong>[핵심 3과목 밀착 디렉팅]</strong> 당락을 가르는 주요 3개 과목의 탐구 활동 전 과정(주제 선정~최종 보고서) 1:1 독점 관리</li>
+                            <li><strong>[통합 검수 1회권]</strong> 학기말 마감 전 생기부 전체 크로스체크 및 학교별 기재 요령에 맞춘 분량(바이트) 최적화</li>
+                            <li><strong>[프리미엄 혜택]</strong> 멘토진과의 <strong>1:1 대면(또는 화상) 심층 컨설팅 1회</strong> 제공</li>
+                        </ul>
+                        
+                        <div class="success-assurance">
+                            🎓 <strong>PS:LAB 알룸나이 (Scholarship & Recruiting)</strong><br>목표 대학 최종 합격 시 <strong>결제액의 30%를 장학금으로 환급</strong>해 드리며, 향후 <strong>PS:LAB 공식 멘토진 합류(채용) 인터뷰 기회</strong>를 최우선으로 부여합니다.
+                        </div>
+                    </div>
+                    
+                    <a href="https://open.kakao.com/o/siqpqtli" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; padding: 1.1rem; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);">Director 플랜 상담하기</a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- 마무리 안내 섹션 -->
+    <div class="closing-section reveal">
+        <h3 style="font-weight: 800;">질문 및 향후 피드백 안내</h3>
+        <p style="font-size: 1.15rem; color: var(--color-text-main);">리포트 내용 중 전략적 판단 근거가 궁금하거나 실천 과정에서 고민이 있다면 언제든 문의해 주세요.</p>
+        
+        <div class="contact-box">
+            <ul>
+                <li>🎁 <strong>1주일 무제한 Q&A:</strong> 리포트 수령 후 일주일 내내 자유롭게 심층 질문 및 피드백 가능</li>
+                <li>📞 <strong>공식 상담 창구:</strong> 카카오톡 채널 'PSLAB' 문의 / 네이버 쪽지 상담</li>
+            </ul>
+        </div>
+        
+        <p style="margin-top: 3rem; font-weight: 800; font-size: 1.3rem; color: var(--color-primary);">
+            귀하의 생활기록부가 대학 문을 여는 가장 강력한 무기가 되도록,<br>PSLAB이 끝까지 치열하게 고민하겠습니다.
+        </p>
+        <p style="margin-top: 1.5rem; font-size: 1.1rem; color: var(--color-text-muted);">
+            - PSLAB 컨설팅 팀 드림 -
+        </p>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">PS<span>:</span>LAB</div>
+            <div style="color: #94a3b8; margin-bottom: 2rem;">모든 학생의 노력이 결실을 맺을 수 있도록, 정확히 찌르는 입시를 제안합니다.</div>
+            
+            <div style="font-size: 0.75rem; color: #475569; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem; text-align: center; line-height: 1.6;">
+                ⓒ 2026 PS:LAB Admissions Consulting. All rights reserved.<br>
+                본 프라이빗 대시보드의 데이터 산출 로직 분석 및 시각화 디자인에 대한 지적재산권은 PS:LAB에 귀속되며, 무단 복제 및 타 기관의 도용을 엄격히 금합니다.
+            </div>
+        </div>
+    </footer>
+
+    <!-- 본인 확인 모달 HTML (다크 모드 리디자인) -->
+    <div id="authModal" class="auth-modal-overlay">
+        <div class="auth-modal">
+            <h3 style="font-size: 1.5rem; color: #ffffff; margin-bottom: 0.6rem; font-weight: 800; display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
+                <span>🤝</span> 1기 멤버 인증
+            </h3>
+            <p style="color: #94a3b8; margin-bottom: 2rem; font-size: 0.95rem; line-height: 1.6; word-break: keep-all;">프라이빗 데이터 보호 및 한정 혜택을 위한 절차입니다.<br>저희 팀을 <strong>가장 처음 만난 커뮤니티</strong>를 입력해주세요.</p>
+            
+            <input type="text" id="authPin" placeholder="커뮤니티 이름 입력" style="width: 100%; padding: 1.2rem; background: rgba(255, 255, 255, 0.05); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; margin-bottom: 1rem; text-align: center; font-size: 1.1rem; letter-spacing: 1px; outline: none; transition: all 0.3s ease;">
+            <p id="authError" style="color: #ef4444; font-size: 0.85rem; margin-top: -0.2rem; margin-bottom: 1.5rem; display: none; font-weight: 600;">인증 정보가 올바르지 않습니다.</p>
+            
+            <div style="display: flex; gap: 0.8rem;">
+                <button onclick="closeAuthModal()" id="closeBtn" class="btn btn-outline" style="flex: 1; padding: 1rem; color: #94a3b8; border-color: rgba(255, 255, 255, 0.2); font-weight: 600; border-radius: 12px;">뒤로</button>
+                <button onclick="verifyAuth()" id="verifyBtn" class="btn btn-primary" style="flex: 1; padding: 1rem; border: none; font-weight: 700; border-radius: 12px; box-shadow: 0 4px 14px rgba(37,99,235,0.4);">인증하기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 플로팅 전화 상담 버튼 -->
+    <a href="tel:010-2446-8370" class="floating-chat-btn">
+        <span class="chat-icon">📞</span>
+        <span class="chat-text">대표 멘토 직접 상담</span>
+    </a>
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Navbar Scroll Effect
+    const navbar = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // 2. Scroll Reveal Animation using Intersection Observer
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    const revealOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, revealOptions);
+
+    revealElements.forEach(el => {
+        revealObserver.observe(el);
+    });
+
+    // 3. Smooth Scrolling for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+            
+            if (targetElement) {
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.scrollY - navbarHeight;
+  
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+
+</script>
+
+    <!-- 모달 제어용 스크립트 -->
+    <script>
+        // ★중요★ 1기 멤버들이 팀을 처음 알게 된 커뮤니티 혹은 장소의 '핵심 키워드'를 적어주세요 (한 번만 세팅하면 모든 학생에게 공통 적용됨)
+        const SECRET_COMMUNITY_KEYWORD = "수만휘"; // 예: "수만휘", "오르비", "시대인재" 등
+
+        // 이동할 타겟 리포트 주소
+        const REPORT_URL = "report.html";
+
+        const authModal = document.getElementById('authModal');
+        const authPin = document.getElementById('authPin');
+        const authError = document.getElementById('authError');
+        const verifyBtn = document.getElementById('verifyBtn');
+
+        function openAuthModal() {
+            authModal.classList.add('active');
+            authPin.value = '';
+            authError.style.display = 'none';
+            authPin.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+            authPin.style.boxShadow = 'none';
+            verifyBtn.innerText = '인증하기';
+            verifyBtn.style.opacity = '1';
+            // 모달이 열리면 자동으로 입력창에 포커스 (모바일 키보드 위함)
+            setTimeout(() => authPin.focus(), 100);
+        }
+
+        function closeAuthModal() {
+            authModal.classList.remove('active');
+        }
+
+        function verifyAuth() {
+            // 사용자가 입력한 값 (포함 여부만 검사하므로 띄어쓰기 등 무시)
+            const inputValue = authPin.value.trim().replace(/\s+/g, '');
+            
+            // 입력 텍스트에 지정한 핵심 키워드가 '포함'되어 있는지 검사 (예: "수만휘에서요" 도 통과)
+            if (inputValue.includes(SECRET_COMMUNITY_KEYWORD)) {
+                authError.style.display = 'none';
+                authPin.style.borderColor = '#10b981'; // 초록색 통과 응답
+                authPin.style.boxShadow = '0 0 15px rgba(16, 185, 129, 0.2)';
+                verifyBtn.innerText = '인증 확인 중...';
+                verifyBtn.style.opacity = '0.7';
+                
+                // 0.8초의 가짜 딜레이를 주어 실제 서버에서 데이터베이스를 조회하는 듯한 프리미엄 연출
+                setTimeout(() => {
+                    closeAuthModal();
+                    // 새 탭으로 리포트 열기
+                    window.open(REPORT_URL, '_blank');
+                }, 800);
+            } else {
+                authError.style.display = 'block';
+                authPin.style.borderColor = '#ef4444';
+                authPin.style.boxShadow = '0 0 15px rgba(239, 68, 68, 0.2)';
+                authPin.focus();
+            }
+        }
+
+        // 엔터키 입력 지원
+        authPin.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                verifyAuth();
+            }
+        });
+
+        // Esc키로 모달 닫기 지원 (더 나은 UX)
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && authModal.classList.contains('active')) {
+                closeAuthModal();
+            }
+        });
+        
+        // 인풋창 포커스 시 테두리 색상 및 글로우 뷰티피케이션
+        authPin.addEventListener('focus', function() {
+            this.style.borderColor = 'var(--color-primary)';
+            this.style.boxShadow = '0 0 15px rgba(37, 99, 235, 0.3)';
+            authError.style.display = 'none';
+        });
+        authPin.addEventListener('blur', function() {
+            if(authError.style.display !== 'block') {
+                this.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                this.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
+
