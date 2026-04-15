@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PS:LAB | 由ы룷???꾩갑 ?덈궡</title>
+    <title>PS:LAB | 리포트 도착 안내</title>
     <style>
 /* 
    PS:LAB Color Theme (Modern, Data-Driven, Tech Startup)
@@ -584,7 +584,7 @@ h2 {
 
 </style>
     <style>
-        /* 異붽? 諛?蹂댁셿???ㅽ????곸슜 (媛?낆꽦 & ?꾨━誘몄뾼 媛뺥솕) */
+        /* 추가 및 보완된 스타일 적용 (가독성 & 프리미엄 강화) */
         body { margin-bottom: 0; }
         
         .delivery-hero {
@@ -633,7 +633,7 @@ h2 {
             font-size: 1.15rem;
         }
         
-        /* ?댁슜???먯쑀濡?쾶 湲멸쾶 ?ｌ쓣 ???덈뒗 ?붿씠?몃낫?쒗삎 ?붿옄??*/
+        /* 내용을 자유롭게 길게 넣을 수 있는 화이트보드형 디자인 */
         .info-card {
             background-color: #ffffff;
             padding: 3.5rem 4rem;
@@ -653,7 +653,7 @@ h2 {
             font-weight: 800;
         }
         
-        /* 異붽??섎뒗 湲?ㅼ쓽 媛?낆꽦??洹밸??뷀븯??paragraph ?ㅼ젙 */
+        /* 추가되는 글들의 가독성을 극대화하는 paragraph 설정 */
         .info-card p {
             color: var(--color-text-main);
             line-height: 1.9;
@@ -668,7 +668,7 @@ h2 {
             color: var(--color-primary);
         }
         
-        /* ?뚮옖 ?뱀뀡 (怨좉툒?ㅻ윭?????ㅽ겕 紐⑤뱶) */
+        /* 플랜 섹션 (고급스러운 딥 다크 모드) */
         .plan-section {
             background-color: #0c111d; 
             padding: 8rem 5%;
@@ -690,7 +690,7 @@ h2 {
             font-size: 1.15rem;
         }
         
-        /* ?뚮옖 移대뱶 援ъ“: ?숈씪???믪씠 ?좎? 諛?踰꾪듉 ?섎떒 怨좎젙 */
+        /* 플랜 카드 구조: 동일한 높이 유지 및 버튼 하단 고정 */
         .plan-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -706,7 +706,7 @@ h2 {
             position: relative;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
-            flex-direction: column; /* 異붽?: 踰꾪듉 ?섎떒 諛곗튂瑜??꾪븳 flex */
+            flex-direction: column; /* 추가: 버튼 하단 배치를 위한 flex */
         }
         .plan-card:hover {
             transform: translateY(-8px);
@@ -714,7 +714,7 @@ h2 {
             box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.5);
         }
         
-        /* ?꾨━誘몄뾼 移대뱶 VIP ?ㅽ??쇰쭅 (????怨⑤뱶/?ㅻ젋吏 鍮? */
+        /* 프리미엄 카드 VIP 스타일링 (은은한 골드/오렌지 빛) */
         .plan-card.premium {
             background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
             border: 1px solid rgba(217, 119, 6, 0.4);
@@ -785,11 +785,11 @@ h2 {
             font-size: 1.1rem;
             color: #10b981;
             margin-left: 0.5rem;
-            vertical-align: super; /* ?꾨줈 ?댁쭩 ?꾩? */
+            vertical-align: super; /* 위로 살짝 띄움 */
             font-weight: 700;
         }
         
-        /* flex-grow瑜?二쇱뼱 ?⑤뒗 怨듦컙??李⑥??섍쾶 留뚮뱾?? ?꾨옒履??붿냼(踰꾪듉)瑜?移대뱶??留?諛붾떏?쇰줈 諛?대깂 */
+        /* flex-grow를 주어 남는 공간을 차지하게 만들어, 아래쪽 요소(버튼)를 카드의 맨 바닥으로 밀어냄 */
         .plan-features-wrapper {
             flex-grow: 1;
             display: flex;
@@ -814,7 +814,7 @@ h2 {
             font-size: 1.1rem;
         }
         .feature-list li::before {
-            content: '??;
+            content: '✓';
             color: var(--color-accent);
             position: absolute;
             left: 0;
@@ -822,7 +822,7 @@ h2 {
             font-size: 1.1rem;
         }
         .plan-card.premium .feature-list li::before {
-            color: #f59e0b; /* ?꾨━誘몄뾼 移대뱶??怨⑤뱶 泥댄겕留덊겕 */
+            color: #f59e0b; /* 프리미엄 카드는 골드 체크마크 */
         }
         
         .success-assurance {
@@ -833,13 +833,13 @@ h2 {
             border-radius: var(--border-radius-md);
             font-size: 0.95rem;
             font-weight: 600;
-            margin-top: auto; /* 諛뺤뒪瑜??꾨옒濡?諛?*/
+            margin-top: auto; /* 박스를 아래로 밂 */
             margin-bottom: 2rem;
             text-align: center;
             line-height: 1.5;
         }
 
-        /* ?섎떒 ?덈궡 ?뱀뀡 */
+        /* 하단 안내 섹션 */
         .closing-section {
             padding: 7rem 5%;
             text-align: center;
@@ -891,12 +891,12 @@ h2 {
             .pricing-notice { padding: 1.5rem 1.5rem !important; }
         }
 
-        /* ?꾨━誘몄뾼 蹂댁븞 紐⑤떖 ?ㅽ???*/
+        /* 프리미엄 보안 모달 스타일 */
         .auth-modal-overlay {
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
-            background-color: rgba(15, 23, 42, 0.85); /* ?ㅽ겕 ?ㅻ쾭?덉씠 媛뺥솕 */
-            backdrop-filter: blur(8px); /* 釉붾윭 媛뺥솕 */
+            background-color: rgba(15, 23, 42, 0.85); /* 다크 오버레이 강화 */
+            backdrop-filter: blur(8px); /* 블러 강화 */
             z-index: 1000;
             display: none;
             justify-content: center;
@@ -909,10 +909,10 @@ h2 {
             opacity: 1;
         }
         .auth-modal {
-            background: #1e293b; /* PS:LAB ?ㅽ겕 移대뱶 諛곌꼍 */
+            background: #1e293b; /* PS:LAB 다크 카드 배경 */
             padding: 3rem 2.5rem;
             border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1); /* 湲?섏뒪紐⑦뵾利??뚮몢由?*/
+            border: 1px solid rgba(255, 255, 255, 0.1); /* 글래스모피즘 테두리 */
             max-width: 420px;
             width: 90%;
             text-align: center;
@@ -923,12 +923,12 @@ h2 {
         .auth-modal-overlay.active .auth-modal {
             transform: translateY(0);
         }
-        /* 紐⑤떖 ?명뭼 ?뚮젅?댁뒪????띿뒪???됱긽 */
+        /* 모달 인풋 플레이스홀더 텍스트 색상 */
         .auth-modal input::placeholder {
             color: #64748b;
         }
 
-        /* ?뚮줈??移댄넚 1:1 ?곷떞 踰꾪듉 */
+        /* 플로팅 카톡 1:1 상담 버튼 */
         .floating-chat-btn {
             position: fixed;
             bottom: 30px;
@@ -967,61 +967,61 @@ h2 {
         </div>
     </nav>
 
-    <!-- ?좊땲硫붿씠?섏? 怨쇳븯吏 ?딄쾶 ?먯뿰?ㅻ윭??fade-in ?꾩＜濡?蹂寃?-->
+    <!-- 애니메이션은 과하지 않게 자연스러운 fade-in 위주로 변경 -->
     <header class="delivery-hero fade-in-up">
         <div class="container">
-            <span class="badge" style="background-color: var(--color-primary); color: white;">STEP 1. ?뺣? ?곗씠??遺꾩꽍 ?꾨즺</span>
+            <span class="badge" style="background-color: var(--color-primary); color: white;">STEP 1. 정밀 데이터 분석 완료</span>
             <h1 style="font-size: clamp(2rem, 5vw, 3rem); margin-top: 1.5rem; line-height: 1.35;">
-                洹?섎쭔???꾪븳<br><strong>?앷린遺 ?꾨왂 遺꾩꽍 由ы룷??/strong> 援ъ텞 ?꾨즺
+                귀하만을 위한<br><strong>생기부 전략 분석 리포트</strong> 구축 완료
             </h1>
-            <p class="hero-subtitle">?덈뀞?섏꽭?? PS:LAB?낅땲??<br>?ㅻ옖 ?쒓컙 湲곕떎?ㅼ＜?붿꽌 媛먯궗?⑸땲?? 洹?섏쓽 ?숈깮遺瑜??ㅺ컖?꾨줈 ?ъ쁺?섏뿬<br>?꾩텧???꾨왂??濡쒕뱶留듭씠 媛쒖씤 ?꾩슜 ??쒕낫?쒖뿉 ?낅줈?쒕릺?덉뒿?덈떎.</p>
+            <p class="hero-subtitle">안녕하세요, PS:LAB입니다.<br>오랜 시간 기다려주셔서 감사합니다. 귀하의 학생부를 다각도로 투영하여<br>도출한 전략적 로드맵이 개인 전용 대시보드에 업로드되었습니다.</p>
         </div>
     </header>
 
     <div class="content-container">
         <!-- 
-            [?띿뒪??異붽? ?곸뿭] 
-            .info-card ?대??먮뒗 ?щ윭 媛쒖쓽 <p> ?쒓렇瑜??곗냽?댁꽌 ?묒꽦?섍린留??섎㈃ 
-            以꾧컙寃?1.9??留ㅼ슦 媛?낆꽦 ?믪? ?뺥깭濡?湲???뚮뜑留곷릺?꾨줉 ?ㅺ퀎?덉뒿?덈떎.
-            湲???꾨Т由?湲몄뼱?몃룄 源붾걫?섍쾶 ?좎??⑸땲??
+            [텍스트 추가 영역] 
+            .info-card 내부에는 여러 개의 <p> 태그를 연속해서 작성하기만 하면 
+            줄간격 1.9의 매우 가독성 높은 형태로 글이 렌더링되도록 설계했습니다.
+            글이 아무리 길어져도 깔끔하게 유지됩니다.
         -->
         <div class="info-card reveal active">
-            <h4><span style="font-size: 1.6rem;">?뵦</span> 72?쒓컙??移섏뿴??湲곕줉</h4>
-            <p>?대쾲 由ы룷?몃뒗 湲곌퀎?곸씤 ?쒖뒪?쒖쓽 寃곌낵臾쇱씠 ?꾨떃?덈떎. 移섏뿴???낆떆瑜?媛??レ뼱???듭떖 硫섑넗?ㅼ씠 吏곸젒 癒몃━瑜?留욌?怨?洹?섏쓽 ?앷린遺 紐⑤뱺 臾몄옣????뼱蹂대ŉ 留욎땄???꾨왂???몄썱?듬땲??</p>
-            <p>諛⑸????꾧뎅 ?⑥쐞 ?⑷꺽 ?곗씠?곕? 蹂댁“?곸쑝濡??щ줈?ㅼ껜?ы븯???곗뿉留??쒖뒪?쒖쓣 ?쒖슜?덉쓣 肉? ??由ы룷?몄쓽 蹂몄쭏? 寃곌뎅 ?숆탳媛 ?꾩튂??吏??쓽 ?뱀닔?깃퉴吏 怨좊젮?섏뿬 <strong>'硫섑넗吏꾩씠 吏곸젒 鍮싳뼱??72?쒓컙 ?댁긽??吏?낇븳 ?멸퀬'</strong>?낅땲?? ?좊같?ㅼ씠 ?꾨같?먭쾶 ?꾪븯??吏꾩떖 ?대┛ ?꾨왂?쒕? ?뺤씤??蹂댁꽭??</p>
+            <h4><span style="font-size: 1.6rem;">🔥</span> 72시간의 치열한 기록</h4>
+            <p>이번 리포트는 기계적인 시스템의 결과물이 아닙니다. 치열한 입시를 갓 뚫어낸 핵심 멘토들이 직접 머리를 맞대고 귀하의 생기부 모든 문장을 뜯어보며 맞춤형 전략을 세웠습니다.</p>
+            <p>방대한 전국 단위 합격 데이터를 보조적으로 크로스체크하는 데에만 시스템을 활용했을 뿐, 이 리포트의 본질은 결국 학교가 위치한 지역의 특수성까지 고려하여 <strong>'멘토진이 직접 빚어낸 72시간 이상의 지독한 노고'</strong>입니다. 선배들이 후배에게 전하는 진심 어린 전략서를 확인해 보세요.</p>
         </div>
 
         <div class="info-card reveal">
-            <h4><span style="font-size: 1.6rem;">?렞</span> STEP 1. ?뺣? ?곗씠??遺꾩꽍</h4>
-            <p>?꾨떖?쒕┛ 由ы룷?몃뒗 PSLAB ?붾（?섏쓽 泥?踰덉㎏ ?④퀎??<strong>[?뺣? ?곗씠??遺꾩꽍]</strong> 寃곌낵?낅땲?? ?곕━???⑥닚??怨쇨굅瑜?湲곕줉?섎뒗 寃껋쓣 ?섏뼱, ?뱀떊???곗씠?곕? ?⑷꺽???ν븳 ?듭떖 ?숇젰?쇰줈 ?꾪솚?섎뒗 ??吏묒쨷?덉뒿?덈떎.</p>
-            <p>?대? 遺꾩꽍???듯빐 洹?섏쓽 媛?μ꽦???뺤씤?덇린?? ?댁젣 遺꾩꽍???섏뼱 ?ㅼ젣 ?⑷꺽???쒖궗瑜??꾩꽦???ㅼ쓬 ?④퀎瑜??쒖븞?⑸땲??</p>
+            <h4><span style="font-size: 1.6rem;">🎯</span> STEP 1. 정밀 데이터 분석</h4>
+            <p>전달드린 리포트는 PSLAB 솔루션의 첫 번째 단계인 <strong>[정밀 데이터 분석]</strong> 결과입니다. 우리는 단순히 과거를 기록하는 것을 넘어, 당신의 데이터를 합격을 향한 핵심 동력으로 전환하는 데 집중했습니다.</p>
+            <p>이미 분석을 통해 귀하의 가능성을 확인했기에, 이제 분석을 넘어 실제 합격의 서사를 완성할 다음 단계를 제안합니다.</p>
         </div>
 
-        <!-- ?듭떖 由ы룷???뺤씤 踰꾪듉 諛뺤뒪 -->
+        <!-- 핵심 리포트 확인 버튼 박스 -->
         <div class="report-cta-box reveal">
-            <div style="font-size: 3.5rem; margin-bottom: 1.5rem;">?뱤</div>
-            <h3>媛쒖씤 留욎땄????쒕낫?쒓? 以鍮꾨릺?덉뒿?덈떎</h3>
-            <p>蹂댁븞???꾪빐 蹂몄씤 ?뺤씤 ?덉감媛 ?꾩슂?????덉뒿?덈떎.</p>
-            <!-- ?몄쬆 紐⑤떖???몄텧?섎뒗 踰꾪듉?쇰줈 蹂寃쎈맖 -->
-            <button onclick="openAuthModal()" class="btn btn-primary" style="padding: 1.2rem 3.5rem; font-size: 1.25rem; font-weight: 700; border-radius: 50px; border: none; cursor: pointer; color: white;">媛쒕퀎 由ы룷???낆옣?섍린</button>
-            <p style="margin-top: 1.5rem; font-size: 0.95rem; color: #fecaca; font-weight: 700; margin-bottom: 0;">??由ы룷???뺤씤 ?? ?ㅼ떆 ???섏씠吏濡??뚯븘? ?섎떒??[踰좏? ?쒖젙 ?ㅽ띁]瑜?諛섎뱶???뺤씤?댁＜?몄슂!</p>
+            <div style="font-size: 3.5rem; margin-bottom: 1.5rem;">📊</div>
+            <h3>개인 맞춤형 대시보드가 준비되었습니다</h3>
+            <p>보안을 위해 본인 확인 절차가 필요할 수 있습니다.</p>
+            <!-- 인증 모달을 호출하는 버튼으로 변경됨 -->
+            <button onclick="openAuthModal()" class="btn btn-primary" style="padding: 1.2rem 3.5rem; font-size: 1.25rem; font-weight: 700; border-radius: 50px; border: none; cursor: pointer; color: white;">개별 리포트 입장하기</button>
+            <p style="margin-top: 1.5rem; font-size: 0.95rem; color: #fecaca; font-weight: 700; margin-bottom: 0;">※ 리포트 확인 후, 다시 이 페이지로 돌아와 하단의 [베타 한정 오퍼]를 반드시 확인해주세요!</p>
         </div>
     </div>
 
-    <!-- ?좊즺 ?뚮옖 ?쒖븞 ?뱀뀡 -->
+    <!-- 유료 플랜 제안 섹션 -->
     <section class="plan-section">
         <div class="container reveal">
             <div class="plan-section-header">
-                <h2>[Founding Member] 由щ??곕뱶 ?ㅽ띁</h2>
-                <p style="margin-bottom: 2rem;">?ㅼ쭅 1湲?踰좏??뚯뒪?곕텇?ㅺ퍡留??쒓났?섎뒗 50% ?좎젏 ?밸퀎 ?쒗깮?낅땲??</p>
+                <h2>[Founding Member] 리미티드 오퍼</h2>
+                <p style="margin-bottom: 2rem;">오직 1기 베타테스터분들께만 제공되는 50% 선점 특별 혜택입니다.</p>
                 
                 <div class="pricing-notice" style="background-color: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--border-radius-md); padding: 1.5rem 2.5rem; max-width: 800px; margin: 0 auto; text-align: left; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
                     <h4 style="color: #e2e8f0; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
-                        <span>?좑툘</span> ?뺤떇 ?곗묶 ?댁쟾, 1湲??쒖젙 ?밴? 諛??ν썑 ?뺤콉 ?덈궡
+                        <span>⚠️</span> 정식 런칭 이전, 1기 한정 특가 및 향후 정책 안내
                     </h4>
                     <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.6; word-break: keep-all; margin: 0; text-align: left;">
-                        ?꾩옱 ?쒓났?섎뒗 50% ?좎씤媛 諛?硫섑넗吏꾩쓽 諛李??붾젆???쒗깮?, ?뚯슫?붾뱾???곗씠??怨좊룄?붿뿉 湲곗뿬?댁＜?쒕뒗 <strong>1湲?踰좏??뚯뒪?곕텇?ㅼ뿉 ????밸퀎??媛먯궗???섎?瑜??댁븘 ?먭? ?댄븯濡?梨낆젙???쒖떆???밴?</strong>?낅땲??<br><br>
-                        媛??理쒓렐 移섏뿴???낆떆瑜??뚰뙆??理쒖긽?꾧텒 硫섑넗吏꾩씠 ?꾨떞 ?ъ엯?섎뒗 由ъ냼???뱀꽦?? <strong>?뺤떇 ?곗묶 ?쒖젏遺?곕뒗 ?쒕퉬???쒓났 踰붿쐞媛 怨쇰ぉ/?잛닔蹂꾨줈 媛뺥븯寃??쒗븳?섍굅?? ?꾩껜 湲덉븸??理쒖냼 1.5諛??댁긽 ?꾩떎???몄긽)???덉젙</strong>?낅땲?? PS:LAB??紐⑤뱺 ?耳???쒗깮???뚭꺽?곸씤 媛寃⑹쑝濡??꾨━?????덈뒗 ?쒖젙??湲고쉶瑜??볦튂吏 留덉꽭?? <span style="color: #f87171; font-weight: 600;">(??硫섑넗吏?而⑤뵒??愿由щ? ?꾪빐 ?좎갑??議곌린 留덇컧?⑸땲??</span>
+                        현재 제공되는 50% 할인가 및 멘토진의 밀착 디렉팅 혜택은, 파운더들의 데이터 고도화에 기여해주시는 <strong>1기 베타테스터분들에 대한 특별한 감사의 의미를 담아 원가 이하로 책정된 한시적 특가</strong>입니다.<br><br>
+                        가장 최근 치열한 입시를 돌파한 최상위권 멘토진이 전담 투입되는 리소스 특성상, <strong>정식 런칭 시점부터는 서비스 제공 범위가 과목/횟수별로 강하게 제한되거나, 전체 금액이 최소 1.5배 이상 현실화(인상)될 예정</strong>입니다. PS:LAB의 모든 풀케어 혜택을 파격적인 가격으로 누리실 수 있는 한정된 기회를 놓치지 마세요. <span style="color: #f87171; font-weight: 600;">(※ 멘토진 컨디션 관리를 위해 선착순 조기 마감됩니다)</span>
                     </p>
                 </div>
             </div>
@@ -1031,111 +1031,111 @@ h2 {
                 <div class="plan-card">
                     <div class="plan-badge">Standard</div>
                     <h3>Architect Plan</h3>
-                    <p class="plan-desc">"?⑦렪?곸씤 ?쒕룞???섏뼱, ?⑷꺽?쇰줈 ?ν븯??br>?낅낫?곸씤 ?쒖궗瑜?援ъ텞?⑸땲??"</p>
+                    <p class="plan-desc">"단편적인 활동을 넘어, 합격으로 향하는<br>독보적인 서사를 구축합니다."</p>
                     
                     <div class="plan-price">
-                        <span class="original">?뺢? 149,000??/span>
-                        <div class="current">74,500??<span class="discount">50% ??/span></div>
+                        <span class="original">정가 149,000원</span>
+                        <div class="current">74,500원 <span class="discount">50% ↓</span></div>
                     </div>
                     
-                    <!-- ?쒗깮 ?댁슜 & ?≪뀡 踰꾪듉 ?섑띁 (?믪씠 留욎땄?? -->
+                    <!-- 혜택 내용 & 액션 버튼 래퍼 (높이 맞춤용) -->
                     <div class="plan-features-wrapper">
                         <ul class="feature-list">
-                            <li><strong>?숈뾽 ??웾怨??꾧났 ?곹빀?깆쓽 ?낆껜??寃고빀 (Framing)</strong><br>?⑥닚 ?섏뿴???쒕룞?ㅼ쓣 ?좉린?곸쑝濡??곌껐?섏뿬 ?앷린遺 ?꾩껜??援ъ“??堉덈?瑜?寃ш퀬?섍쾶 ?꾩꽦</li>
-                            <li><strong>?ы솕 ?먭뎄 硫붿빱?덉쬁 ?ㅺ퀎</strong><br>吏???멸린?ъ쓽 ?뺤옣??利앸챸?????덈뒗 ?숆린蹂??듭떖 ?먭뎄 怨쇱젣 ?뚭퀬?ㅺ린 諛⑺뼢???쒖떆</li>
-                            <li><strong>[?쒓났] 紐⑺몴 ???留욎땄???ㅼ쟾 濡쒕뱶留?PDF 理쒖쥌 諛쒖넚</strong></li>
+                            <li><strong>학업 역량과 전공 적합성의 입체적 결합 (Framing)</strong><br>단순 나열된 활동들을 유기적으로 연결하여 생기부 전체의 구조적 뼈대를 견고하게 완성</li>
+                            <li><strong>심화 탐구 메커니즘 설계</strong><br>지적 호기심의 확장을 증명할 수 있는 학기별 핵심 탐구 과제 파고들기 방향성 제시</li>
+                            <li><strong>[제공] 목표 대학 맞춤형 실전 로드맵 PDF 최종 발송</strong></li>
                         </ul>
                     </div>
                     
-                    <!-- ??긽 移대뱶 理쒗븯?⑥뿉 踰꾪듉??怨좎젙 諛곗튂??-->
-                    <a href="https://open.kakao.com/o/siqpqtli" target="_blank" class="btn btn-outline" style="width: 100%; text-align: center; padding: 1.1rem; border-color: #64748b; color: white; font-weight: 700; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.1)';" onmouseout="this.style.backgroundColor='transparent';">Standard ?뚮옖 ?곷떞?섍린</a>
+                    <!-- 항상 카드 최하단에 버튼이 고정 배치됨 -->
+                    <a href="https://open.kakao.com/o/siqpqtli" target="_blank" class="btn btn-outline" style="width: 100%; text-align: center; padding: 1.1rem; border-color: #64748b; color: white; font-weight: 700; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='rgba(255,255,255,0.1)';" onmouseout="this.style.backgroundColor='transparent';">Architect 플랜 상담하기</a>
                 </div>
 
-                <!-- Premium Plan (VIP ?꾩슜 ??뀛由??ㅽ??쇰쭅 ?곸슜?? -->
+                <!-- Premium Plan (VIP 전용 럭셔리 스타일링 적용됨) -->
                 <div class="plan-card premium" style="border: 1px solid var(--color-primary); box-shadow: 0 0 30px rgba(37, 99, 235, 0.15);">
                     <div class="plan-badge">Premium Director</div>
                     <h3>Director Plan</h3>
-                    <p class="plan-desc">"?앷린遺??紐⑤뱺 臾몄옣???됯?愿???뺤떊???섎룄濡?<br>PSLAB????怨쇱젙??吏곸젒 ?붾젆?낇빀?덈떎."</p>
+                    <p class="plan-desc">"생기부의 모든 문장이 평가관의 확신이 되도록,<br>PSLAB이 전 과정을 직접 디렉팅합니다."</p>
                     
                     <div class="plan-price">
-                        <span class="original">?뺢? 299,000??/span>
-                        <div class="current">149,500??<span class="discount">50% ??/span></div>
+                        <span class="original">정가 299,000원</span>
+                        <div class="current">149,500원 <span class="discount">50% ↓</span></div>
                     </div>
                     
                     <div class="plan-features-wrapper">
                         <ul class="feature-list">
-                            <li><strong>紐⑤뱺 臾몄옣???꾩꽦??洹밸???(Refining)</strong><br>?됰쾾???댁슜???낇븰?ъ젙愿???ㅻ뱷?섎뒗 ?좎뭅濡쒖슫 ?⑷꺽 洹쇨굅濡??덈컮轅?/li>
-                            <li><strong>[?듭떖 3怨쇰ぉ 諛李??붾젆??</strong> ?밸씫??媛瑜대뒗 二쇱슂 3媛?怨쇰ぉ???먭뎄 ?쒕룞 ??怨쇱젙(二쇱젣 ?좎젙~理쒖쥌 蹂닿퀬?? 1:1 ?낆젏 愿由?/li>
-                            <li><strong>[?듯빀 寃??1?뚭텒]</strong> ?숆린留?留덇컧 ???앷린遺 ?꾩껜 ?щ줈?ㅼ껜??諛??숆탳蹂?湲곗옱 ?붾졊??留욎텣 遺꾨웾(諛붿씠?? 理쒖쟻??/li>
-                            <li><strong>[?꾨━誘몄뾼 ?쒗깮]</strong> 硫섑넗吏꾧낵??<strong>1:1 ?硫??먮뒗 ?붿긽) ?ъ링 而⑥꽕??1??/strong> ?쒓났</li>
+                            <li><strong>모든 문장의 완성도 극대화 (Refining)</strong><br>평범한 내용을 입학사정관을 설득하는 날카로운 합격 근거로 탈바꿈</li>
+                            <li><strong>[핵심 3과목 밀착 디렉팅]</strong> 당락을 가르는 주요 3개 과목의 탐구 활동 전 과정(주제 선정~최종 보고서) 1:1 독점 관리</li>
+                            <li><strong>[통합 검수 1회권]</strong> 학기말 마감 전 생기부 전체 크로스체크 및 학교별 기재 요령에 맞춘 분량(바이트) 최적화</li>
+                            <li><strong>[프리미엄 혜택]</strong> 멘토진과의 <strong>1:1 대면(또는 화상) 심층 컨설팅 1회</strong> 제공</li>
                         </ul>
                         
                         <div class="success-assurance">
-                            ?럳 <strong>PS:LAB ?뚮８?섏씠 (Scholarship & Recruiting)</strong><br>紐⑺몴 ???理쒖쥌 ?⑷꺽 ??<strong>寃곗젣?≪쓽 30%瑜??ν븰湲덉쑝濡??섍툒</strong>???쒕━硫? ?ν썑 <strong>PS:LAB 怨듭떇 硫섑넗吏??⑸쪟(梨꾩슜) ?명꽣酉?湲고쉶</strong>瑜?理쒖슦?좎쑝濡?遺?ы빀?덈떎.
+                            🎓 <strong>PS:LAB 알룸나이 (Scholarship & Recruiting)</strong><br>목표 대학 최종 합격 시 <strong>결제액의 30%를 장학금으로 환급</strong>해 드리며, 향후 <strong>PS:LAB 공식 멘토진 합류(채용) 인터뷰 기회</strong>를 최우선으로 부여합니다.
                         </div>
                     </div>
                     
-                    <a href="https://open.kakao.com/o/siqpqtli" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; padding: 1.1rem; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);">Director ?뚮옖 ?곷떞?섍린</a>
+                    <a href="https://open.kakao.com/o/siqpqtli" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; padding: 1.1rem; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);">Director 플랜 상담하기</a>
                 </div>
             </div>
             
         </div>
     </section>
 
-    <!-- 留덈Т由??덈궡 ?뱀뀡 -->
+    <!-- 마무리 안내 섹션 -->
     <div class="closing-section reveal">
-        <h3 style="font-weight: 800;">吏덈Ц 諛??ν썑 ?쇰뱶諛??덈궡</h3>
-        <p style="font-size: 1.15rem; color: var(--color-text-main);">由ы룷???댁슜 以??꾨왂???먮떒 洹쇨굅媛 沅곴툑?섍굅???ㅼ쿇 怨쇱젙?먯꽌 怨좊????덈떎硫??몄젣??臾몄쓽??二쇱꽭??</p>
+        <h3 style="font-weight: 800;">질문 및 향후 피드백 안내</h3>
+        <p style="font-size: 1.15rem; color: var(--color-text-main);">리포트 내용 중 전략적 판단 근거가 궁금하거나 실천 과정에서 고민이 있다면 언제든 문의해 주세요.</p>
         
         <div class="contact-box">
             <ul>
-                <li>?럞 <strong>1二쇱씪 臾댁젣??Q&A:</strong> 由ы룷???섎졊 ???쇱＜???대궡 ?먯쑀濡?쾶 ?ъ링 吏덈Ц 諛??쇰뱶諛?媛??/li>
-                <li>?뱸 <strong>怨듭떇 ?곷떞 李쎄뎄:</strong> 移댁뭅?ㅽ넚 梨꾨꼸 'PSLAB' 臾몄쓽 / ?ㅼ씠踰?履쎌? ?곷떞</li>
+                <li>🎁 <strong>1주일 무제한 Q&A:</strong> 리포트 수령 후 일주일 내내 자유롭게 심층 질문 및 피드백 가능</li>
+                <li>📞 <strong>공식 상담 창구:</strong> 카카오톡 채널 'PSLAB' 문의 / 네이버 쪽지 상담</li>
             </ul>
         </div>
         
         <p style="margin-top: 3rem; font-weight: 800; font-size: 1.3rem; color: var(--color-primary);">
-            洹?섏쓽 ?앺솢湲곕줉遺媛 ???臾몄쓣 ?щ뒗 媛??媛뺣젰??臾닿린媛 ?섎룄濡?<br>PSLAB???앷퉴吏 移섏뿴?섍쾶 怨좊??섍쿋?듬땲??
+            귀하의 생활기록부가 대학 문을 여는 가장 강력한 무기가 되도록,<br>PSLAB이 끝까지 치열하게 고민하겠습니다.
         </p>
         <p style="margin-top: 1.5rem; font-size: 1.1rem; color: var(--color-text-muted);">
-            - PSLAB 而⑥꽕??? ?쒕┝ -
+            - PSLAB 컨설팅 팀 드림 -
         </p>
     </div>
 
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-logo">PS<span>:</span>LAB</div>
-            <div style="color: #94a3b8; margin-bottom: 2rem;">紐⑤뱺 ?숈깮???몃젰??寃곗떎??留븐쓣 ???덈룄濡? ?뺥솗??李뚮Ⅴ???낆떆瑜??쒖븞?⑸땲??</div>
+            <div style="color: #94a3b8; margin-bottom: 2rem;">모든 학생의 노력이 결실을 맺을 수 있도록, 정확히 찌르는 입시를 제안합니다.</div>
             
             <div style="font-size: 0.75rem; color: #475569; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem; text-align: center; line-height: 1.6;">
-                ??2026 PS:LAB Admissions Consulting. All rights reserved.<br>
-                蹂??꾨씪?대퉿 ??쒕낫?쒖쓽 ?곗씠???곗텧 濡쒖쭅 遺꾩꽍 諛??쒓컖???붿옄?몄뿉 ???吏?곸옱?곌텒? PS:LAB??洹?띾릺硫? 臾대떒 蹂듭젣 諛?? 湲곌????꾩슜???꾧꺽??湲덊빀?덈떎.
+                ⓒ 2026 PS:LAB Admissions Consulting. All rights reserved.<br>
+                본 프라이빗 대시보드의 데이터 산출 로직 분석 및 시각화 디자인에 대한 지적재산권은 PS:LAB에 귀속되며, 무단 복제 및 타 기관의 도용을 엄격히 금합니다.
             </div>
         </div>
     </footer>
 
-    <!-- 蹂몄씤 ?뺤씤 紐⑤떖 HTML (?ㅽ겕 紐⑤뱶 由щ뵒?먯씤) -->
+    <!-- 본인 확인 모달 HTML (다크 모드 리디자인) -->
     <div id="authModal" class="auth-modal-overlay">
         <div class="auth-modal">
             <h3 style="font-size: 1.5rem; color: #ffffff; margin-bottom: 0.6rem; font-weight: 800; display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
-                <span>?쩃</span> 1湲?硫ㅻ쾭 ?몄쬆
+                <span>🤝</span> 1기 멤버 인증
             </h3>
-            <p style="color: #94a3b8; margin-bottom: 2rem; font-size: 0.95rem; line-height: 1.6; word-break: keep-all;">?꾨씪?대퉿 ?곗씠??蹂댄샇 諛??쒖젙 ?쒗깮???꾪븳 ?덉감?낅땲??<br>??????<strong>媛??泥섏쓬 留뚮궃 而ㅻ??덊떚</strong>瑜??낅젰?댁＜?몄슂.</p>
+            <p style="color: #94a3b8; margin-bottom: 2rem; font-size: 0.95rem; line-height: 1.6; word-break: keep-all;">프라이빗 데이터 보호 및 한정 혜택을 위한 절차입니다.<br>저희 팀을 <strong>가장 처음 만난 커뮤니티</strong>를 입력해주세요.</p>
             
-            <input type="text" id="authPin" placeholder="而ㅻ??덊떚 ?대쫫 ?낅젰" style="width: 100%; padding: 1.2rem; background: rgba(255, 255, 255, 0.05); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; margin-bottom: 1rem; text-align: center; font-size: 1.1rem; letter-spacing: 1px; outline: none; transition: all 0.3s ease;">
-            <p id="authError" style="color: #ef4444; font-size: 0.85rem; margin-top: -0.2rem; margin-bottom: 1.5rem; display: none; font-weight: 600;">?몄쬆 ?뺣낫媛 ?щ컮瑜댁? ?딆뒿?덈떎.</p>
+            <input type="text" id="authPin" placeholder="커뮤니티 이름 입력" style="width: 100%; padding: 1.2rem; background: rgba(255, 255, 255, 0.05); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; margin-bottom: 1rem; text-align: center; font-size: 1.1rem; letter-spacing: 1px; outline: none; transition: all 0.3s ease;">
+            <p id="authError" style="color: #ef4444; font-size: 0.85rem; margin-top: -0.2rem; margin-bottom: 1.5rem; display: none; font-weight: 600;">인증 정보가 올바르지 않습니다.</p>
             
             <div style="display: flex; gap: 0.8rem;">
-                <button onclick="closeAuthModal()" id="closeBtn" class="btn btn-outline" style="flex: 1; padding: 1rem; color: #94a3b8; border-color: rgba(255, 255, 255, 0.2); font-weight: 600; border-radius: 12px;">?ㅻ줈</button>
-                <button onclick="verifyAuth()" id="verifyBtn" class="btn btn-primary" style="flex: 1; padding: 1rem; border: none; font-weight: 700; border-radius: 12px; box-shadow: 0 4px 14px rgba(37,99,235,0.4);">?몄쬆?섍린</button>
+                <button onclick="closeAuthModal()" id="closeBtn" class="btn btn-outline" style="flex: 1; padding: 1rem; color: #94a3b8; border-color: rgba(255, 255, 255, 0.2); font-weight: 600; border-radius: 12px;">뒤로</button>
+                <button onclick="verifyAuth()" id="verifyBtn" class="btn btn-primary" style="flex: 1; padding: 1rem; border: none; font-weight: 700; border-radius: 12px; box-shadow: 0 4px 14px rgba(37,99,235,0.4);">인증하기</button>
             </div>
         </div>
     </div>
 
-    <!-- ?뚮줈???꾪솕 ?곷떞 踰꾪듉 -->
+    <!-- 플로팅 전화 상담 버튼 -->
     <a href="tel:010-2446-8370" class="floating-chat-btn">
-        <span class="chat-icon">?뱸</span>
-        <span class="chat-text">???硫섑넗 吏곸젒 ?곷떞</span>
+        <span class="chat-icon">📞</span>
+        <span class="chat-text">대표 멘토 직접 상담</span>
     </a>
 
     <script>
@@ -1198,11 +1198,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </script>
 
-    <!-- 紐⑤떖 ?쒖뼱???ㅽ겕由쏀듃 -->
+    <!-- 모달 제어용 스크립트 -->
     <script>
-        // ?낆쨷?붴쁾 1湲?硫ㅻ쾭?ㅼ씠 ???泥섏쓬 ?뚭쾶 ??而ㅻ??덊떚 ?뱀? ?μ냼??'?듭떖 ?ㅼ썙??瑜??곸뼱二쇱꽭??(??踰덈쭔 ?명똿?섎㈃ 紐⑤뱺 ?숈깮?먭쾶 怨듯넻 ?곸슜??
-        const SECRET_COMMUNITY_KEYWORD = "?섎쭔??; // ?? "?섎쭔??, "?ㅻⅤ鍮?, "?쒕??몄옱" ??
-        // ?대룞???寃?由ы룷??二쇱냼
+        // ★중요★ 1기 멤버들이 팀을 처음 알게 된 커뮤니티 혹은 장소의 '핵심 키워드'를 적어주세요 (한 번만 세팅하면 모든 학생에게 공통 적용됨)
+        const SECRET_COMMUNITY_KEYWORD = "수만휘"; // 예: "수만휘", "오르비", "시대인재" 등
+
+        // 이동할 타겟 리포트 주소
         const REPORT_URL = "report.html";
 
         const authModal = document.getElementById('authModal');
@@ -1216,9 +1217,9 @@ document.addEventListener('DOMContentLoaded', () => {
             authError.style.display = 'none';
             authPin.style.borderColor = 'rgba(255, 255, 255, 0.1)';
             authPin.style.boxShadow = 'none';
-            verifyBtn.innerText = '?몄쬆?섍린';
+            verifyBtn.innerText = '인증하기';
             verifyBtn.style.opacity = '1';
-            // 紐⑤떖???대━硫??먮룞?쇰줈 ?낅젰李쎌뿉 ?ъ빱??(紐⑤컮???ㅻ낫???꾪븿)
+            // 모달이 열리면 자동으로 입력창에 포커스 (모바일 키보드 위함)
             setTimeout(() => authPin.focus(), 100);
         }
 
@@ -1227,22 +1228,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function verifyAuth() {
-            // ?ъ슜?먭? ?낅젰??媛?(?ы븿 ?щ?留?寃?ы븯誘濡??꾩뼱?곌린 ??臾댁떆)
+            // 사용자가 입력한 값 (포함 여부만 검사하므로 띄어쓰기 등 무시)
             const inputValue = authPin.value.trim().replace(/\s+/g, '');
             
-            // ?낅젰 ?띿뒪?몄뿉 吏?뺥븳 ?듭떖 ?ㅼ썙?쒓? '?ы븿'?섏뼱 ?덈뒗吏 寃??(?? "?섎쭔?섏뿉?쒖슂" ???듦낵)
+            // 입력 텍스트에 지정한 핵심 키워드가 '포함'되어 있는지 검사 (예: "수만휘에서요" 도 통과)
             if (inputValue.includes(SECRET_COMMUNITY_KEYWORD)) {
                 authError.style.display = 'none';
-                authPin.style.borderColor = '#10b981'; // 珥덈줉???듦낵 ?묐떟
+                authPin.style.borderColor = '#10b981'; // 초록색 통과 응답
                 authPin.style.boxShadow = '0 0 15px rgba(16, 185, 129, 0.2)';
-                verifyBtn.innerText = '?몄쬆 ?뺤씤 以?..';
+                verifyBtn.innerText = '인증 확인 중...';
                 verifyBtn.style.opacity = '0.7';
                 
-                // 0.8珥덉쓽 媛吏??쒕젅?대? 二쇱뼱 ?ㅼ젣 ?쒕쾭?먯꽌 ?곗씠?곕쿋?댁뒪瑜?議고쉶?섎뒗 ??븳 ?꾨━誘몄뾼 ?곗텧
+                // 0.8초의 가짜 딜레이를 주어 실제 서버에서 데이터베이스를 조회하는 듯한 프리미엄 연출
                 setTimeout(() => {
                     closeAuthModal();
-                    // ????쑝濡?由ы룷???닿린
-                    window.open(REPORT_URL, '_blank');
+                    // 새 탭으로 열 경우 모바일/사파리에서 팝업 차단에 걸리므로 현재 화면에서 바로 이동하도록 수정
+                    window.location.href = REPORT_URL;
                 }, 800);
             } else {
                 authError.style.display = 'block';
@@ -1252,20 +1253,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // ?뷀꽣???낅젰 吏??        authPin.addEventListener('keypress', function(e) {
+        // 엔터키 입력 지원
+        authPin.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 verifyAuth();
             }
         });
 
-        // Esc?ㅻ줈 紐⑤떖 ?リ린 吏??(???섏? UX)
+        // Esc키로 모달 닫기 지원 (더 나은 UX)
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && authModal.classList.contains('active')) {
                 closeAuthModal();
             }
         });
         
-        // ?명뭼李??ъ빱?????뚮몢由??됱긽 諛?湲濡쒖슦 酉고떚?쇱??댁뀡
+        // 인풋창 포커스 시 테두리 색상 및 글로우 뷰티피케이션
         authPin.addEventListener('focus', function() {
             this.style.borderColor = 'var(--color-primary)';
             this.style.boxShadow = '0 0 15px rgba(37, 99, 235, 0.3)';
@@ -1280,5 +1282,4 @@ document.addEventListener('DOMContentLoaded', () => {
     </script>
 </body>
 </html>
-
 
